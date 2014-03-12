@@ -3,15 +3,9 @@
 @interface NSDictionary (Modifying)
 
 
-#pragma mark - Properties
-
-
-#pragma mark - Static Methods
-
-+ (instancetype)dictionaryByAddingEntriesFromDictionary: (NSDictionary *)dictionary;
-
-
 #pragma mark - Instance Methods
+
+- (instancetype)dictionaryByAddingEntriesFromDictionary: (NSDictionary *)dictionary;
 
 
 @end
