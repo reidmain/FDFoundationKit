@@ -31,6 +31,8 @@
 		27604C3C18C270DA00FB085C /* FDWeakMutableDictionary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27604C2418C2709200FB085C /* FDWeakMutableDictionary.h */; };
 		27604C3D18C270DA00FB085C /* FDWeakReference.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27604C2618C2709200FB085C /* FDWeakReference.h */; };
 		27604C3F18C2714D00FB085C /* FDFoundationKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27604C3E18C2714700FB085C /* FDFoundationKit.h */; };
+		27A1F5D418CFF40900A77EDD /* NSDictionary+Modifying.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A1F5D318CFF40900A77EDD /* NSDictionary+Modifying.m */; };
+		27A1F5D518CFF4FA00A77EDD /* NSDictionary+Modifying.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				27A1F5D518CFF4FA00A77EDD /* NSDictionary+Modifying.h in CopyFiles */,
 				27604C3F18C2714D00FB085C /* FDFoundationKit.h in CopyFiles */,
 				27604C3218C270DA00FB085C /* NSArray+Accessing.h in CopyFiles */,
 				27604C3318C270DA00FB085C /* NSDictionary+Accessing.h in CopyFiles */,
@@ -85,6 +88,8 @@
 		27604C2618C2709200FB085C /* FDWeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDWeakReference.h; sourceTree = "<group>"; };
 		27604C2718C2709200FB085C /* FDWeakReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDWeakReference.m; sourceTree = "<group>"; };
 		27604C3E18C2714700FB085C /* FDFoundationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDFoundationKit.h; path = "FDFoundationKit Static Library/FDFoundationKit.h"; sourceTree = SOURCE_ROOT; };
+		27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Modifying.h"; sourceTree = "<group>"; };
+		27A1F5D318CFF40900A77EDD /* NSDictionary+Modifying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Modifying.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +153,8 @@
 				27604C1018C2709200FB085C /* NSArray+Accessing.m */,
 				27604C1118C2709200FB085C /* NSDictionary+Accessing.h */,
 				27604C1218C2709200FB085C /* NSDictionary+Accessing.m */,
+				27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */,
+				27A1F5D318CFF40900A77EDD /* NSDictionary+Modifying.m */,
 				27604C1318C2709200FB085C /* NSDictionary+URLEncode.h */,
 				27604C1418C2709200FB085C /* NSDictionary+URLEncode.m */,
 				27604C1518C2709200FB085C /* NSObject+PerformBlock.h */,
@@ -256,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27604C2818C2709200FB085C /* NSArray+Accessing.m in Sources */,
+				27A1F5D418CFF40900A77EDD /* NSDictionary+Modifying.m in Sources */,
 				27604C2A18C2709200FB085C /* NSDictionary+URLEncode.m in Sources */,
 				27604C2918C2709200FB085C /* NSDictionary+Accessing.m in Sources */,
 				27604C2B18C2709200FB085C /* NSObject+PerformBlock.m in Sources */,

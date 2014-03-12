@@ -11,6 +11,7 @@
 
 #import "NSArray+Accessing.h"
 #import "NSDictionary+Accessing.h"
+#import "NSDictionary+Modifying.h"
 #import "NSDictionary+URLEncode.h"
 #import "NSObject+PerformBlock.h"
 #import "NSString+URLEncode.h"
