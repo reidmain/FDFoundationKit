@@ -68,5 +68,31 @@ static void * const _PropertyListKey;
 	return declaredProperty;
 }
 
++ (FDDeclaredProperty *)declaredPropertyForKeyPath: (NSString *)keyPath
+{
+	// Break the key path into its components.
+	NSArray *keys = [keyPath componentsSeparatedByString:@"."];
+	
+	// Get the declared property on the first key.
+	NSString *firstKey = [keys firstObject];
+	
+	FDDeclaredProperty *firstDeclaredProperty = [self declaredPropertyForName: firstKey];
+	
+	// If there is only one key the first declared property can be immediately returned.
+	if ([keys count] == 1)
+	{
+		return firstDeclaredProperty;
+	}
+	
+	// Create a new key path of the remaining keys.
+	NSArray *remainingKeys = [keys subarrayWithRange: NSMakeRange(1, [keys count] - 1)];
+	NSString *remainingKeyPath = [remainingKeys componentsJoinedByString: @"."];
+	
+	// Get the declared property of the remaining key path on the first declared property.
+	FDDeclaredProperty *declaredProperty = [firstDeclaredProperty.type declaredPropertyForKeyPath: remainingKeyPath];
+	
+	return declaredProperty;
+}
+
 
 @end
