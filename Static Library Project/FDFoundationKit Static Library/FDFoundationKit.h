@@ -2,6 +2,7 @@
 #import "FDLogger.h"
 
 #import "FDThreadSafeMutableDictionary.h"
+#import "FDValueTransformer.h"
 
 #import "FDDeclaredProperty.h"
 #import "NSObject+PropertyType.h"

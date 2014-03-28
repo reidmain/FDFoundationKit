@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2722326318C26A180051677A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2722326218C26A180051677A /* Foundation.framework */; };
+		273A1A7918E4B28B004F96FE /* FDValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 273A1A7818E4B28B004F96FE /* FDValueTransformer.m */; };
+		273A1A7A18E4B30C004F96FE /* FDValueTransformer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 273A1A7718E4B28B004F96FE /* FDValueTransformer.h */; };
 		27604C2818C2709200FB085C /* NSArray+Accessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1018C2709200FB085C /* NSArray+Accessing.m */; };
 		27604C2918C2709200FB085C /* NSDictionary+Accessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1218C2709200FB085C /* NSDictionary+Accessing.m */; };
 		27604C2A18C2709200FB085C /* NSDictionary+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1418C2709200FB085C /* NSDictionary+URLEncode.m */; };
@@ -42,6 +44,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				273A1A7A18E4B30C004F96FE /* FDValueTransformer.h in CopyFiles */,
 				27A1F5D518CFF4FA00A77EDD /* NSDictionary+Modifying.h in CopyFiles */,
 				27604C3F18C2714D00FB085C /* FDFoundationKit.h in CopyFiles */,
 				27604C3218C270DA00FB085C /* NSArray+Accessing.h in CopyFiles */,
@@ -65,6 +68,8 @@
 		2722325F18C26A180051677A /* libFDFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFDFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2722326218C26A180051677A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2722326618C26A180051677A /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		273A1A7718E4B28B004F96FE /* FDValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDValueTransformer.h; sourceTree = "<group>"; };
+		273A1A7818E4B28B004F96FE /* FDValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDValueTransformer.m; sourceTree = "<group>"; };
 		27604C0F18C2709200FB085C /* NSArray+Accessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Accessing.h"; sourceTree = "<group>"; };
 		27604C1018C2709200FB085C /* NSArray+Accessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Accessing.m"; sourceTree = "<group>"; };
 		27604C1118C2709200FB085C /* NSDictionary+Accessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Accessing.h"; sourceTree = "<group>"; };
@@ -172,6 +177,8 @@
 				27604C1A18C2709200FB085C /* FDLogger.h */,
 				27604C1C18C2709200FB085C /* FDThreadSafeMutableDictionary.h */,
 				27604C1D18C2709200FB085C /* FDThreadSafeMutableDictionary.m */,
+				273A1A7718E4B28B004F96FE /* FDValueTransformer.h */,
+				273A1A7818E4B28B004F96FE /* FDValueTransformer.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -267,6 +274,7 @@
 				27604C2A18C2709200FB085C /* NSDictionary+URLEncode.m in Sources */,
 				27604C2918C2709200FB085C /* NSDictionary+Accessing.m in Sources */,
 				27604C2B18C2709200FB085C /* NSObject+PerformBlock.m in Sources */,
+				273A1A7918E4B28B004F96FE /* FDValueTransformer.m in Sources */,
 				27604C2F18C2709200FB085C /* NSObject+PropertyType.m in Sources */,
 				27604C2C18C2709200FB085C /* NSString+URLEncode.m in Sources */,
 				27604C3018C2709200FB085C /* FDWeakMutableDictionary.m in Sources */,
