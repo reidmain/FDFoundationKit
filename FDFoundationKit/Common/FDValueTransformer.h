@@ -26,6 +26,12 @@ typedef id (^FDValueTransformerBlock)(id value);
 - (instancetype)initWithBlock: (FDValueTransformerBlock)transformBlock 
 	reverseBlock: (FDValueTransformerBlock)reverseTransformBlock;
 
++ (void)registerTransformerWithName: (NSString *)name 
+	block: (FDValueTransformerBlock)transformBlock 
+	reverseBlock: (FDValueTransformerBlock)reverseTransformBlock;
++ (void)registerTransformerWithName: (NSString *)name 
+	block: (FDValueTransformerBlock)transformBlock;
+
 
 #pragma mark - Static Methods
 

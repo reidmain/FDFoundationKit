@@ -66,6 +66,25 @@
 
 #pragma mark - Public Methods
 
++ (void)registerTransformerWithName: (NSString *)name 
+	block: (FDValueTransformerBlock)transformBlock 
+	reverseBlock: (FDValueTransformerBlock)reverseTransformBlock
+{
+	FDValueTransformer *valueTransformer = [FDValueTransformer transformerWithBlock: transformBlock 
+		reverseBlock: reverseTransformBlock];
+	
+	[NSValueTransformer setValueTransformer: valueTransformer 
+		forName: name];
+}
+
++ (void)registerTransformerWithName: (NSString *)name 
+	block: (FDValueTransformerBlock)transformBlock
+{
+	[self registerTransformerWithName: name 
+		block: transformBlock 
+		reverseBlock: nil];
+}
+
 
 #pragma mark - Overridden Methods
 
