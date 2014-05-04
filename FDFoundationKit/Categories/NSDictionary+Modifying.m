@@ -6,9 +6,6 @@
 @implementation NSDictionary (Modifying)
 
 
-#pragma mark - Properties
-
-
 #pragma mark - Public Methods
 
 - (instancetype)dictionaryByAddingEntriesFromDictionary: (NSDictionary *)dictionary
