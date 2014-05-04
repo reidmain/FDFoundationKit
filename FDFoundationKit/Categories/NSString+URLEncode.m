@@ -10,14 +10,20 @@
 
 - (NSString *)urlEncode
 {
-	CFStringRef encodedString = CFURLCreateStringByAddingPercentEscapes(
-		kCFAllocatorDefault, 
-		(CFStringRef)self, 
-		NULL, 
-		(CFStringRef)@"!*'();:@&=+$,/?%#[]",
-		kCFStringEncodingUTF8);
+	NSString *charactersToEscape = @"!*'();:@&=+$,/?#[]%\" ";
+	NSCharacterSet *characterSetToEscape = [NSCharacterSet characterSetWithCharactersInString: charactersToEscape];
+	NSCharacterSet *allowedCharacters = [characterSetToEscape invertedSet];
 	
-	return (__bridge_transfer NSString *)encodedString;
+	NSString *encodedString = [self stringByAddingPercentEncodingWithAllowedCharacters: allowedCharacters];
+	
+	return encodedString;
+}
+
+- (NSString *)urlDecode
+{
+	NSString *decodedString = [self stringByRemovingPercentEncoding];
+	
+	return decodedString;
 }
 
 

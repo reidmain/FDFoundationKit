@@ -6,6 +6,7 @@
 #pragma mark - Instance Methods
 
 - (NSString *)urlEncode;
+- (NSString *)urlDecode;
 
 
 @end
