@@ -4,8 +4,7 @@
 
 #pragma mark Constants
 
-static void * const _DeclaredPropertyForNameKey = (void *)&_DeclaredPropertyForNameKey;
-static void * const _DeclaredPropertiesForSubclassKey = (void *)&_DeclaredPropertiesForSubclassKey;
+static void * const _DeclaredPropertiesForClassKey = (void *)&_DeclaredPropertiesForClassKey;
 
 
 #pragma mark - Class Definition
@@ -17,17 +16,9 @@ static void * const _DeclaredPropertiesForSubclassKey = (void *)&_DeclaredProper
 
 + (FDDeclaredProperty *)declaredPropertyForName: (NSString *)propertyName
 {
-	// Store a dictionary of all the declared properties on the class so subsequent calls for the same property name are cached.
-	NSMutableDictionary *declaredProperties = objc_getAssociatedObject(self, _DeclaredPropertyForNameKey);
-	if (declaredProperties == nil)
-	{
-		declaredProperties = [NSMutableDictionary dictionary];
-		
-		objc_setAssociatedObject(self, _DeclaredPropertyForNameKey, declaredProperties, OBJC_ASSOCIATION_RETAIN);
-	}
-	
 	// Check if the declared property for the specified name has been cached.
-	FDDeclaredProperty *declaredProperty = [declaredProperties objectForKey: propertyName];
+	NSMutableDictionary *declaredPropertiesByName = [self _declaredPropertiesForClass: self];
+	FDDeclaredProperty *declaredProperty = [declaredPropertiesByName objectForKey: propertyName];
 	
 	// If the declared property has not been cached create it from the property metadata.
 	if(declaredProperty == nil)
@@ -40,7 +31,8 @@ static void * const _DeclaredPropertiesForSubclassKey = (void *)&_DeclaredProper
 		}
 		
 		declaredProperty = [FDDeclaredProperty declaredPropertyForPropertyType: propertyType];
-		[declaredProperties setValue: declaredProperty 
+		
+		[declaredPropertiesByName setValue: declaredProperty 
 			forKey: propertyName];
 	}
 	
@@ -75,76 +67,67 @@ static void * const _DeclaredPropertiesForSubclassKey = (void *)&_DeclaredProper
 
 + (NSArray *)declaredPropertiesForSubclass: (Class)subclass
 {
-	NSString *subclassAsString = NSStringFromClass(subclass);
-
-	// Store a dictionary of the declared properties for a specific subclass on the class so subsequent calls for the same subclass are cached.
-	NSMutableDictionary *declaredPropertiesForSubclass = objc_getAssociatedObject(self, _DeclaredPropertiesForSubclassKey);
-	if (declaredPropertiesForSubclass == nil)
-	{
-		declaredPropertiesForSubclass = [NSMutableDictionary dictionary];
-		
-		objc_setAssociatedObject(self, _DeclaredPropertiesForSubclassKey, declaredPropertiesForSubclass, OBJC_ASSOCIATION_RETAIN);
-	}
+	NSMutableArray *declaredProperties = [NSMutableArray array];
+	NSMutableSet *namesOfDeclaredProperties = [NSMutableSet set];
 	
-	// Check if the declared properties for this subclass have already been cached.
-	NSMutableArray *declaredProperties = [declaredPropertiesForSubclass objectForKey: subclassAsString];
-	
-	// If the declared properties have not been cached create them.
-	if (declaredProperties == nil)
+	Class objectClass = self;
+	while ([objectClass isSubclassOfClass: subclass] == YES)
 	{
-		declaredProperties = [NSMutableArray array];
-		NSMutableSet *namesOfDeclaredProperties = [NSMutableSet set];
+		unsigned int numberOfProperties = 0;
+		objc_property_t *properties = class_copyPropertyList(objectClass, &numberOfProperties);
 		
-		Class class = self;
-		while ([class isSubclassOfClass: subclass] == YES)
+		for (unsigned int i=0; i < numberOfProperties; i++)
 		{
-			unsigned int numberOfProperties = 0;
-			objc_property_t *properties = class_copyPropertyList(class, &numberOfProperties);
+			objc_property_t propertyType = properties[i];
 			
-			for (unsigned int i=0; i < numberOfProperties; i++)
+			// Load the name of the property type.
+			const char *rawPropertyName = property_getName(propertyType);
+			NSString *propertyName = [NSString stringWithUTF8String: rawPropertyName];
+			
+			// Check if the declared property for the property type has been cached.
+			NSMutableDictionary *declaredPropertiesByName = [self _declaredPropertiesForClass: self];
+			FDDeclaredProperty *declaredProperty = [declaredPropertiesByName objectForKey: propertyName];
+			
+			// If the declared property has not been cached create it from the property type.
+			if (declaredProperty == nil)
 			{
-				objc_property_t propertyType = properties[i];
+				declaredProperty = [FDDeclaredProperty declaredPropertyForPropertyType: propertyType];
 				
-				// Load the name of the property type.
-				const char *rawPropertyName = property_getName(propertyType);
-				NSString *propertyName = [NSString stringWithUTF8String: rawPropertyName];
-				
-				// Store a dictionary of all the declared properties on the class so subsequent calls for the same property name are cached.
-				NSMutableDictionary *declaredPropertiesForClass = objc_getAssociatedObject(class, _DeclaredPropertyForNameKey);
-				if (declaredPropertiesForClass == nil)
-				{
-					declaredPropertiesForClass = [NSMutableDictionary dictionary];
-					
-					objc_setAssociatedObject(class, _DeclaredPropertyForNameKey, declaredPropertiesForClass, OBJC_ASSOCIATION_RETAIN);
-				}
-				
-				// Check if the declared property for the property type has been cached.
-				FDDeclaredProperty *declaredProperty = [declaredPropertiesForClass objectForKey: propertyName];
-				if (declaredProperty == nil)
-				{
-					declaredProperty = [FDDeclaredProperty declaredPropertyForPropertyType: propertyType];
-					[declaredPropertiesForClass setObject: declaredProperty 
-						forKey: propertyName];
-				}
-				
-				// If a property by this name has not yet been encountered add it to the array. If a property by this name already exists ignore it because it means that the property has been redefined in a subclass.
-				if ([namesOfDeclaredProperties containsObject: declaredProperty.name] == NO)
-				{
-					[declaredProperties addObject: declaredProperty];
-					[namesOfDeclaredProperties addObject: declaredProperty.name];
-				}
+				[declaredPropertiesByName setObject: declaredProperty 
+					forKey: propertyName];
 			}
 			
-			free(properties);
-			
-			class = [class superclass];
+			// If a property by this name has not yet been encountered add it to the array. If a property by this name already exists ignore it because it means that the property has been redefined in a subclass.
+			if ([namesOfDeclaredProperties containsObject: declaredProperty.name] == NO)
+			{
+				[declaredProperties addObject: declaredProperty];
+				[namesOfDeclaredProperties addObject: declaredProperty.name];
+			}
 		}
 		
-		[declaredPropertiesForSubclass setObject: declaredProperties 
-			forKey: subclassAsString];
+		free(properties);
+		
+		objectClass = [objectClass superclass];
 	}
 	
 	return declaredProperties;
+}
+
+#pragma mark - Private Methods
+
++ (NSMutableDictionary *)_declaredPropertiesForClass: (Class)objectClass
+{
+	// Store a dictionary of all the declared properties on the class so subsequent calls for the same property name can be cached.
+	NSMutableDictionary *declaredPropertiesForClass = objc_getAssociatedObject(objectClass, _DeclaredPropertiesForClassKey);
+	if (declaredPropertiesForClass == nil)
+	{
+		declaredPropertiesForClass = [NSMutableDictionary dictionary];
+		
+		// TODO: Invesigate the need to wrap this in a dispatch_once because in their two seperate threads could be requesting property info for the first time at the exact same time which could lead to two dictionaries being created and one overwriting the other leading to lost data.
+		objc_setAssociatedObject(objectClass, _DeclaredPropertiesForClassKey, declaredPropertiesForClass, OBJC_ASSOCIATION_RETAIN);
+	}
+	
+	return declaredPropertiesForClass;
 }
 
 
