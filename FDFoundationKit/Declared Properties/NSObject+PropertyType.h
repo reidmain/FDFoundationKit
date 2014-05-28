@@ -10,6 +10,7 @@
 
 + (FDDeclaredProperty *)declaredPropertyForName: (NSString *)propertyName;
 + (FDDeclaredProperty *)declaredPropertyForKeyPath: (NSString *)keyPath;
++ (NSArray *)declaredPropertiesForSubclass: (Class)subclass;
 
 
 @end

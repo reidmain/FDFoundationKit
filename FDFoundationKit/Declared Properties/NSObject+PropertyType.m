@@ -38,31 +38,9 @@ static void * const _PropertyListKey;
 			return nil;
 		}
 		
-		declaredProperty = [FDDeclaredProperty new];
+		declaredProperty = [FDDeclaredProperty declaredPropertyForPropertyType: propertyType];
 		[declaredProperties setValue: declaredProperty 
 			forKey: propertyName];
-		
-		const char *attributesString = property_getAttributes(propertyType);
-		
-		// If the property is an object type it should contain a quoted string so look for the first quotation marks.
-		const char *startOfTypeString = strchr(attributesString, '"') ;
-		if (startOfTypeString != nil)
-		{
-			// Increment the start of the type string by one to move past the quotation marks.
-			startOfTypeString++;
-			
-			// Look for the second quotation marks.
-			const char *endOfTypeString = strchr(startOfTypeString, '"');
-			
-			// Calculate the length of the class name.
-			size_t classNameLength = endOfTypeString - startOfTypeString;
-			
-			char className[classNameLength + 1];
-			className[classNameLength] = '\0';
-			strncpy(className, startOfTypeString, classNameLength);
-			
-			declaredProperty.type = objc_getClass(className);
-		}
 	}
 	
 	return declaredProperty;
@@ -92,6 +70,34 @@ static void * const _PropertyListKey;
 	FDDeclaredProperty *declaredProperty = [firstDeclaredProperty.type declaredPropertyForKeyPath: remainingKeyPath];
 	
 	return declaredProperty;
+}
+
++ (NSArray *)declaredPropertiesForSubclass: (Class)subclass
+{
+	NSMutableArray *declaredProperties = [NSMutableArray array];
+	
+	Class class = self;
+	while ([class isSubclassOfClass: subclass] == YES)
+	{
+		unsigned int numberOfProperties = 0;
+		objc_property_t *properties = class_copyPropertyList(class, &numberOfProperties);
+		
+		for (unsigned int i=0; i < numberOfProperties; i++)
+		{
+			objc_property_t propertyType = properties[i];
+			
+			// TODO: Store this declared property in the dictionary associated with the object.
+			FDDeclaredProperty *declaredProperty = [FDDeclaredProperty declaredPropertyForPropertyType: propertyType];
+			
+			[declaredProperties addObject: declaredProperty];
+		}
+		
+		free(properties);
+		
+		class = [class superclass];
+	}
+	
+	return declaredProperties;
 }
 
 
