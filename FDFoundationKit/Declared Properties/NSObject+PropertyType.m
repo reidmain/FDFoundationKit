@@ -75,6 +75,7 @@ static void * const _PropertyListKey;
 + (NSArray *)declaredPropertiesForSubclass: (Class)subclass
 {
 	NSMutableArray *declaredProperties = [NSMutableArray array];
+	NSMutableSet *namesOfDeclaredProperties = [NSMutableSet set];
 	
 	Class class = self;
 	while ([class isSubclassOfClass: subclass] == YES)
@@ -89,7 +90,12 @@ static void * const _PropertyListKey;
 			// TODO: Store this declared property in the dictionary associated with the object.
 			FDDeclaredProperty *declaredProperty = [FDDeclaredProperty declaredPropertyForPropertyType: propertyType];
 			
-			[declaredProperties addObject: declaredProperty];
+			// If a property by this name has not yet been encountered add it to the array. If a property by this name already exists ignore it because it means that the property has been redefined in a subclass.
+			if ([namesOfDeclaredProperties containsObject: declaredProperty.name] == NO)
+			{
+				[declaredProperties addObject: declaredProperty];
+				[namesOfDeclaredProperties addObject: declaredProperty.name];
+			}
 		}
 		
 		free(properties);
