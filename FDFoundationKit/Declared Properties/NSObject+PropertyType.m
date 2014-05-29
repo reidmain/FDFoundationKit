@@ -93,7 +93,7 @@ static void * const _DeclaredPropertiesForClassKey = (void *)&_DeclaredPropertie
 			{
 				declaredProperty = [FDDeclaredProperty declaredPropertyForPropertyType: propertyType];
 				
-				[declaredPropertiesByName setObject: declaredProperty 
+				[declaredPropertiesByName setValue: declaredProperty 
 					forKey: propertyName];
 			}
 			
