@@ -21,9 +21,16 @@
 {
 	if (waitUntilDone == YES)
 	{
-		dispatch_sync(
-			dispatch_get_main_queue(), 
-			block);
+		if ([NSThread isMainThread] == NO)
+		{
+			dispatch_sync(
+				dispatch_get_main_queue(), 
+				block);
+		}
+		else
+		{
+			block();
+		}
 	}
 	else
 	{
