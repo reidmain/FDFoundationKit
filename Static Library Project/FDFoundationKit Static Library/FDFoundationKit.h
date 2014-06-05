@@ -16,4 +16,5 @@
 #import "NSDictionary+Modifying.h"
 #import "NSDictionary+URLEncode.h"
 #import "NSObject+PerformBlock.h"
+#import "NSString+Hashing.h"
 #import "NSString+URLEncode.h"

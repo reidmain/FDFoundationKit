@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270619FA193F6C07005C2F40 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 270619F9193F6C07005C2F40 /* NSString+Hashing.m */; };
+		270619FB193F6CF2005C2F40 /* NSString+Hashing.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 270619F8193F6C07005C2F40 /* NSString+Hashing.h */; };
 		2722326318C26A180051677A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2722326218C26A180051677A /* Foundation.framework */; };
 		273A1A7918E4B28B004F96FE /* FDValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 273A1A7818E4B28B004F96FE /* FDValueTransformer.m */; };
 		273A1A7A18E4B30C004F96FE /* FDValueTransformer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 273A1A7718E4B28B004F96FE /* FDValueTransformer.h */; };
@@ -45,6 +47,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				270619FB193F6CF2005C2F40 /* NSString+Hashing.h in CopyFiles */,
 				2744FA3B18F0A82200A9E432 /* FDKeypath.h in CopyFiles */,
 				273A1A7A18E4B30C004F96FE /* FDValueTransformer.h in CopyFiles */,
 				27A1F5D518CFF4FA00A77EDD /* NSDictionary+Modifying.h in CopyFiles */,
@@ -67,6 +70,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		270619F8193F6C07005C2F40 /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
+		270619F9193F6C07005C2F40 /* NSString+Hashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashing.m"; sourceTree = "<group>"; };
 		2722325F18C26A180051677A /* libFDFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFDFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2722326218C26A180051677A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2722326618C26A180051677A /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
@@ -167,6 +172,8 @@
 				27604C1418C2709200FB085C /* NSDictionary+URLEncode.m */,
 				27604C1518C2709200FB085C /* NSObject+PerformBlock.h */,
 				27604C1618C2709200FB085C /* NSObject+PerformBlock.m */,
+				270619F8193F6C07005C2F40 /* NSString+Hashing.h */,
+				270619F9193F6C07005C2F40 /* NSString+Hashing.m */,
 				27604C1718C2709200FB085C /* NSString+URLEncode.h */,
 				27604C1818C2709200FB085C /* NSString+URLEncode.m */,
 			);
@@ -278,6 +285,7 @@
 				27604C2A18C2709200FB085C /* NSDictionary+URLEncode.m in Sources */,
 				27604C2918C2709200FB085C /* NSDictionary+Accessing.m in Sources */,
 				27604C2B18C2709200FB085C /* NSObject+PerformBlock.m in Sources */,
+				270619FA193F6C07005C2F40 /* NSString+Hashing.m in Sources */,
 				273A1A7918E4B28B004F96FE /* FDValueTransformer.m in Sources */,
 				27604C2F18C2709200FB085C /* NSObject+PropertyType.m in Sources */,
 				27604C2C18C2709200FB085C /* NSString+URLEncode.m in Sources */,
