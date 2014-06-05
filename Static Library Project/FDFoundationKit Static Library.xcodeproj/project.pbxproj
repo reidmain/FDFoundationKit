@@ -36,6 +36,8 @@
 		27604C3C18C270DA00FB085C /* FDWeakMutableDictionary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27604C2418C2709200FB085C /* FDWeakMutableDictionary.h */; };
 		27604C3D18C270DA00FB085C /* FDWeakReference.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27604C2618C2709200FB085C /* FDWeakReference.h */; };
 		27604C3F18C2714D00FB085C /* FDFoundationKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27604C3E18C2714700FB085C /* FDFoundationKit.h */; };
+		276F313F1940FF0B00116F6B /* FDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 276F313E1940FF0B00116F6B /* FDCache.m */; };
+		276F31401941007A00116F6B /* FDCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 276F313D1940FF0B00116F6B /* FDCache.h */; };
 		27A1F5D418CFF40900A77EDD /* NSDictionary+Modifying.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A1F5D318CFF40900A77EDD /* NSDictionary+Modifying.m */; };
 		27A1F5D518CFF4FA00A77EDD /* NSDictionary+Modifying.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */; };
 /* End PBXBuildFile section */
@@ -47,6 +49,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				276F31401941007A00116F6B /* FDCache.h in CopyFiles */,
 				270619FB193F6CF2005C2F40 /* NSString+Hashing.h in CopyFiles */,
 				2744FA3B18F0A82200A9E432 /* FDKeypath.h in CopyFiles */,
 				273A1A7A18E4B30C004F96FE /* FDValueTransformer.h in CopyFiles */,
@@ -101,6 +104,8 @@
 		27604C2618C2709200FB085C /* FDWeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDWeakReference.h; sourceTree = "<group>"; };
 		27604C2718C2709200FB085C /* FDWeakReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDWeakReference.m; sourceTree = "<group>"; };
 		27604C3E18C2714700FB085C /* FDFoundationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDFoundationKit.h; path = "FDFoundationKit Static Library/FDFoundationKit.h"; sourceTree = SOURCE_ROOT; };
+		276F313D1940FF0B00116F6B /* FDCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDCache.h; sourceTree = "<group>"; };
+		276F313E1940FF0B00116F6B /* FDCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDCache.m; sourceTree = "<group>"; };
 		27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Modifying.h"; sourceTree = "<group>"; };
 		27A1F5D318CFF40900A77EDD /* NSDictionary+Modifying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Modifying.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +191,8 @@
 				27604C1B18C2709200FB085C /* FDNullOrEmpty.h */,
 				27604C1A18C2709200FB085C /* FDLogger.h */,
 				2744FA3A18F0A7D600A9E432 /* FDKeypath.h */,
+				276F313D1940FF0B00116F6B /* FDCache.h */,
+				276F313E1940FF0B00116F6B /* FDCache.m */,
 				27604C1C18C2709200FB085C /* FDThreadSafeMutableDictionary.h */,
 				27604C1D18C2709200FB085C /* FDThreadSafeMutableDictionary.m */,
 				273A1A7718E4B28B004F96FE /* FDValueTransformer.h */,
@@ -288,6 +295,7 @@
 				270619FA193F6C07005C2F40 /* NSString+Hashing.m in Sources */,
 				273A1A7918E4B28B004F96FE /* FDValueTransformer.m in Sources */,
 				27604C2F18C2709200FB085C /* NSObject+PropertyType.m in Sources */,
+				276F313F1940FF0B00116F6B /* FDCache.m in Sources */,
 				27604C2C18C2709200FB085C /* NSString+URLEncode.m in Sources */,
 				27604C3018C2709200FB085C /* FDWeakMutableDictionary.m in Sources */,
 				27604C2E18C2709200FB085C /* FDDeclaredProperty.m in Sources */,

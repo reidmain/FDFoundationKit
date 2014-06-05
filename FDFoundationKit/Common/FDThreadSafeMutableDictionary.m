@@ -36,7 +36,7 @@
 	}
 	
 	// Initialize instance variables.
-	_mutableDictionary = [NSMutableDictionary new];
+	_mutableDictionary = [NSMutableDictionary dictionaryWithCapacity: capacity];
 	
 	// Return initialized instance.
 	return self;

@@ -2,6 +2,7 @@
 #import "FDLogger.h"
 #import "FDKeypath.h"
 
+#import "FDCache.h"
 #import "FDThreadSafeMutableDictionary.h"
 #import "FDValueTransformer.h"
 
