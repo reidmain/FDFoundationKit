@@ -54,4 +54,17 @@
 }
 
 
+#pragma mark - Overridden Methods
+
+- (NSString *)description
+{
+	NSString *description = [NSString stringWithFormat: @"<%@: %p; count = %lu>", 
+		[self class], 
+		self, 
+		(unsigned long)[_weakDictionary count]];
+	
+	return description;
+}
+
+
 @end
