@@ -1,3 +1,6 @@
+@import Foundation;
+
+
 #pragma mak Type Definitions
 
 typedef id (^FDValueTransformerBlock)(id value);

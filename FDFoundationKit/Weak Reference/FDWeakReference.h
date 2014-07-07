@@ -1,3 +1,6 @@
+@import Foundation;
+
+
 #define FDWeakVar(var)            __weak_ ## var
 
 #define FDWeakDeclare(var)        __weak id FDWeakVar(var) = var

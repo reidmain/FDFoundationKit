@@ -1,3 +1,6 @@
+@import Foundation;
+
+
 #pragma mark Class Interface
 
 @interface NSDictionary (URLEncode)

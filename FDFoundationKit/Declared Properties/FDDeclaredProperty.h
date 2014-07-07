@@ -1,4 +1,5 @@
-#import <objc/runtime.h>
+@import Foundation;
+@import ObjectiveC;
 
 
 #pragma mark Constants
