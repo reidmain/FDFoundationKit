@@ -6,20 +6,7 @@
 @implementation NSArray (Accessing)
 
 
-#pragma mark -
-#pragma mark Public Methods
-
-- (id)firstObject
-{
-	id firstObject = nil;
-	
-	if ([self count] > 0)
-	{
-		firstObject = [self objectAtIndex: 0];
-	}
-	
-	return firstObject;
-}
+#pragma mark - Public Methods
 
 - (id)randomObject
 {
@@ -48,4 +35,4 @@
 }
 
 
-@end // @implementation NSArray (Accessing)
+@end

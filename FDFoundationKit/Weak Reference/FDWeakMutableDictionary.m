@@ -22,7 +22,7 @@
 	}
 	
 	// Initialize instance variables.
-	_mutableDictionary = [FDThreadSafeMutableDictionary dictionary];
+	_mutableDictionary = [FDThreadSafeMutableDictionary dictionaryWithCapacity: capacity];
 	
 	// Return initialized instance.
 	return self;

@@ -3,12 +3,12 @@
 
 #pragma mark Class Interface
 
-@interface NSDictionary (URLEncode)
+@interface NSString (Hashing)
 
 
 #pragma mark - Instance Methods
 
-- (NSString *)urlEncode;
+- (NSString *)sha256HashString;
 
 
 @end

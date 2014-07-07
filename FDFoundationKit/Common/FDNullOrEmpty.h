@@ -1,3 +1,6 @@
+@import Foundation;
+
+
 static inline BOOL FDIsNull(id object)
 {
 	// Check if the object is nil or the NSNull object.

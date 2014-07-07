@@ -1,3 +1,6 @@
+@import Foundation;
+
+
 #if !defined(FDLog)
 	#if defined(DEBUG) || defined(AD_HOC)
 		#define FDLog(logLevel, format, ...) FDLogger(logLevel, format, ##__VA_ARGS__)

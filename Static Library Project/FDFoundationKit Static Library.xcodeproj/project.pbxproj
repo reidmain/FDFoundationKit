@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2722326318C26A180051677A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2722326218C26A180051677A /* Foundation.framework */; };
+		270619FA193F6C07005C2F40 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 270619F9193F6C07005C2F40 /* NSString+Hashing.m */; };
+		270619FB193F6CF2005C2F40 /* NSString+Hashing.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 270619F8193F6C07005C2F40 /* NSString+Hashing.h */; };
+		273A1A7918E4B28B004F96FE /* FDValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 273A1A7818E4B28B004F96FE /* FDValueTransformer.m */; };
+		273A1A7A18E4B30C004F96FE /* FDValueTransformer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 273A1A7718E4B28B004F96FE /* FDValueTransformer.h */; };
+		2744FA3B18F0A82200A9E432 /* FDKeypath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2744FA3A18F0A7D600A9E432 /* FDKeypath.h */; };
 		27604C2818C2709200FB085C /* NSArray+Accessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1018C2709200FB085C /* NSArray+Accessing.m */; };
 		27604C2918C2709200FB085C /* NSDictionary+Accessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1218C2709200FB085C /* NSDictionary+Accessing.m */; };
 		27604C2A18C2709200FB085C /* NSDictionary+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1418C2709200FB085C /* NSDictionary+URLEncode.m */; };
@@ -31,6 +35,8 @@
 		27604C3C18C270DA00FB085C /* FDWeakMutableDictionary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27604C2418C2709200FB085C /* FDWeakMutableDictionary.h */; };
 		27604C3D18C270DA00FB085C /* FDWeakReference.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27604C2618C2709200FB085C /* FDWeakReference.h */; };
 		27604C3F18C2714D00FB085C /* FDFoundationKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27604C3E18C2714700FB085C /* FDFoundationKit.h */; };
+		276F313F1940FF0B00116F6B /* FDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 276F313E1940FF0B00116F6B /* FDCache.m */; };
+		276F31401941007A00116F6B /* FDCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 276F313D1940FF0B00116F6B /* FDCache.h */; };
 		27A1F5D418CFF40900A77EDD /* NSDictionary+Modifying.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A1F5D318CFF40900A77EDD /* NSDictionary+Modifying.m */; };
 		27A1F5D518CFF4FA00A77EDD /* NSDictionary+Modifying.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */; };
 /* End PBXBuildFile section */
@@ -42,6 +48,10 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				276F31401941007A00116F6B /* FDCache.h in CopyFiles */,
+				270619FB193F6CF2005C2F40 /* NSString+Hashing.h in CopyFiles */,
+				2744FA3B18F0A82200A9E432 /* FDKeypath.h in CopyFiles */,
+				273A1A7A18E4B30C004F96FE /* FDValueTransformer.h in CopyFiles */,
 				27A1F5D518CFF4FA00A77EDD /* NSDictionary+Modifying.h in CopyFiles */,
 				27604C3F18C2714D00FB085C /* FDFoundationKit.h in CopyFiles */,
 				27604C3218C270DA00FB085C /* NSArray+Accessing.h in CopyFiles */,
@@ -62,9 +72,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		270619F8193F6C07005C2F40 /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
+		270619F9193F6C07005C2F40 /* NSString+Hashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashing.m"; sourceTree = "<group>"; };
 		2722325F18C26A180051677A /* libFDFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFDFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2722326218C26A180051677A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2722326618C26A180051677A /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		273A1A7718E4B28B004F96FE /* FDValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDValueTransformer.h; sourceTree = "<group>"; };
+		273A1A7818E4B28B004F96FE /* FDValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDValueTransformer.m; sourceTree = "<group>"; };
+		2744FA3A18F0A7D600A9E432 /* FDKeypath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDKeypath.h; sourceTree = "<group>"; };
 		27604C0F18C2709200FB085C /* NSArray+Accessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Accessing.h"; sourceTree = "<group>"; };
 		27604C1018C2709200FB085C /* NSArray+Accessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Accessing.m"; sourceTree = "<group>"; };
 		27604C1118C2709200FB085C /* NSDictionary+Accessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Accessing.h"; sourceTree = "<group>"; };
@@ -88,6 +101,8 @@
 		27604C2618C2709200FB085C /* FDWeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDWeakReference.h; sourceTree = "<group>"; };
 		27604C2718C2709200FB085C /* FDWeakReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDWeakReference.m; sourceTree = "<group>"; };
 		27604C3E18C2714700FB085C /* FDFoundationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDFoundationKit.h; path = "FDFoundationKit Static Library/FDFoundationKit.h"; sourceTree = SOURCE_ROOT; };
+		276F313D1940FF0B00116F6B /* FDCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDCache.h; sourceTree = "<group>"; };
+		276F313E1940FF0B00116F6B /* FDCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDCache.m; sourceTree = "<group>"; };
 		27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Modifying.h"; sourceTree = "<group>"; };
 		27A1F5D318CFF40900A77EDD /* NSDictionary+Modifying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Modifying.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +112,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2722326318C26A180051677A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				2722326418C26A180051677A /* FDFoundationKit Static Library */,
-				2722326118C26A180051677A /* Frameworks */,
 				2722326018C26A180051677A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,29 +134,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2722326118C26A180051677A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2722326218C26A180051677A /* Foundation.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		2722326418C26A180051677A /* FDFoundationKit Static Library */ = {
 			isa = PBXGroup;
 			children = (
 				27DC1FD118C26AEF006CFD54 /* FDFoundationKit */,
-				2722326518C26A180051677A /* Supporting Files */,
 			);
 			path = "FDFoundationKit Static Library";
-			sourceTree = "<group>";
-		};
-		2722326518C26A180051677A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2722326618C26A180051677A /* Prefix.pch */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		27604C0E18C2709200FB085C /* Categories */ = {
@@ -159,6 +155,8 @@
 				27604C1418C2709200FB085C /* NSDictionary+URLEncode.m */,
 				27604C1518C2709200FB085C /* NSObject+PerformBlock.h */,
 				27604C1618C2709200FB085C /* NSObject+PerformBlock.m */,
+				270619F8193F6C07005C2F40 /* NSString+Hashing.h */,
+				270619F9193F6C07005C2F40 /* NSString+Hashing.m */,
 				27604C1718C2709200FB085C /* NSString+URLEncode.h */,
 				27604C1818C2709200FB085C /* NSString+URLEncode.m */,
 			);
@@ -170,8 +168,13 @@
 			children = (
 				27604C1B18C2709200FB085C /* FDNullOrEmpty.h */,
 				27604C1A18C2709200FB085C /* FDLogger.h */,
+				2744FA3A18F0A7D600A9E432 /* FDKeypath.h */,
+				276F313D1940FF0B00116F6B /* FDCache.h */,
+				276F313E1940FF0B00116F6B /* FDCache.m */,
 				27604C1C18C2709200FB085C /* FDThreadSafeMutableDictionary.h */,
 				27604C1D18C2709200FB085C /* FDThreadSafeMutableDictionary.m */,
+				273A1A7718E4B28B004F96FE /* FDValueTransformer.h */,
+				273A1A7818E4B28B004F96FE /* FDValueTransformer.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -267,7 +270,10 @@
 				27604C2A18C2709200FB085C /* NSDictionary+URLEncode.m in Sources */,
 				27604C2918C2709200FB085C /* NSDictionary+Accessing.m in Sources */,
 				27604C2B18C2709200FB085C /* NSObject+PerformBlock.m in Sources */,
+				270619FA193F6C07005C2F40 /* NSString+Hashing.m in Sources */,
+				273A1A7918E4B28B004F96FE /* FDValueTransformer.m in Sources */,
 				27604C2F18C2709200FB085C /* NSObject+PropertyType.m in Sources */,
+				276F313F1940FF0B00116F6B /* FDCache.m in Sources */,
 				27604C2C18C2709200FB085C /* NSString+URLEncode.m in Sources */,
 				27604C3018C2709200FB085C /* FDWeakMutableDictionary.m in Sources */,
 				27604C2E18C2709200FB085C /* FDDeclaredProperty.m in Sources */,
@@ -350,8 +356,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/FDFoundationKit_Static_Library.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FDFoundationKit Static Library/Supporting Files/Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -362,8 +366,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/FDFoundationKit_Static_Library.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FDFoundationKit Static Library/Supporting Files/Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

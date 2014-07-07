@@ -16,11 +16,34 @@
 		afterDelay: delay];
 }
 
+- (void)performBlockOnMainThread: (dispatch_block_t)block 
+	waitUntilDone: (BOOL)waitUntilDone
+{
+	if (waitUntilDone == YES)
+	{
+		if ([NSThread isMainThread] == NO)
+		{
+			dispatch_sync(
+				dispatch_get_main_queue(), 
+				block);
+		}
+		else
+		{
+			block();
+		}
+	}
+	else
+	{
+		dispatch_async(
+			dispatch_get_main_queue(), 
+			block);
+	}
+}
+
 - (void)performBlockOnMainThread: (dispatch_block_t)block
 {
-	dispatch_sync(
-		dispatch_get_main_queue(), 
-		block);
+	[self performBlockOnMainThread: block 
+		waitUntilDone: NO];
 }
 
 - (void)performBlockInBackground: (dispatch_block_t)block
