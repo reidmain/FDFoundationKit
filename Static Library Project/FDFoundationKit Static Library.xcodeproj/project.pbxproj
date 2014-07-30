@@ -12,6 +12,11 @@
 		273A1A7918E4B28B004F96FE /* FDValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 273A1A7818E4B28B004F96FE /* FDValueTransformer.m */; };
 		273A1A7A18E4B30C004F96FE /* FDValueTransformer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 273A1A7718E4B28B004F96FE /* FDValueTransformer.h */; };
 		2744FA3B18F0A82200A9E432 /* FDKeypath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2744FA3A18F0A7D600A9E432 /* FDKeypath.h */; };
+		2752600F198978D2004DA285 /* FDURLEncoding.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2752600E198975C1004DA285 /* FDURLEncoding.h */; };
+		2752601219897CC5004DA285 /* NSValue+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2752601119897CC5004DA285 /* NSValue+URLEncode.m */; };
+		2752601319897CE2004DA285 /* NSValue+URLEncode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2752601019897CC4004DA285 /* NSValue+URLEncode.h */; };
+		2752601619897F4D004DA285 /* NSArray+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2752601519897F4D004DA285 /* NSArray+URLEncode.m */; };
+		2752601719897F60004DA285 /* NSArray+URLEncode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2752601419897F4D004DA285 /* NSArray+URLEncode.h */; };
 		27604C2818C2709200FB085C /* NSArray+Accessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1018C2709200FB085C /* NSArray+Accessing.m */; };
 		27604C2918C2709200FB085C /* NSDictionary+Accessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1218C2709200FB085C /* NSDictionary+Accessing.m */; };
 		27604C2A18C2709200FB085C /* NSDictionary+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1418C2709200FB085C /* NSDictionary+URLEncode.m */; };
@@ -48,6 +53,9 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				2752601719897F60004DA285 /* NSArray+URLEncode.h in CopyFiles */,
+				2752601319897CE2004DA285 /* NSValue+URLEncode.h in CopyFiles */,
+				2752600F198978D2004DA285 /* FDURLEncoding.h in CopyFiles */,
 				276F31401941007A00116F6B /* FDCache.h in CopyFiles */,
 				270619FB193F6CF2005C2F40 /* NSString+Hashing.h in CopyFiles */,
 				2744FA3B18F0A82200A9E432 /* FDKeypath.h in CopyFiles */,
@@ -78,6 +86,11 @@
 		273A1A7718E4B28B004F96FE /* FDValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDValueTransformer.h; sourceTree = "<group>"; };
 		273A1A7818E4B28B004F96FE /* FDValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDValueTransformer.m; sourceTree = "<group>"; };
 		2744FA3A18F0A7D600A9E432 /* FDKeypath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDKeypath.h; sourceTree = "<group>"; };
+		2752600E198975C1004DA285 /* FDURLEncoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDURLEncoding.h; sourceTree = "<group>"; };
+		2752601019897CC4004DA285 /* NSValue+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+URLEncode.h"; sourceTree = "<group>"; };
+		2752601119897CC5004DA285 /* NSValue+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+URLEncode.m"; sourceTree = "<group>"; };
+		2752601419897F4D004DA285 /* NSArray+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+URLEncode.h"; sourceTree = "<group>"; };
+		2752601519897F4D004DA285 /* NSArray+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+URLEncode.m"; sourceTree = "<group>"; };
 		27604C0F18C2709200FB085C /* NSArray+Accessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Accessing.h"; sourceTree = "<group>"; };
 		27604C1018C2709200FB085C /* NSArray+Accessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Accessing.m"; sourceTree = "<group>"; };
 		27604C1118C2709200FB085C /* NSDictionary+Accessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Accessing.h"; sourceTree = "<group>"; };
@@ -147,6 +160,8 @@
 			children = (
 				27604C0F18C2709200FB085C /* NSArray+Accessing.h */,
 				27604C1018C2709200FB085C /* NSArray+Accessing.m */,
+				2752601419897F4D004DA285 /* NSArray+URLEncode.h */,
+				2752601519897F4D004DA285 /* NSArray+URLEncode.m */,
 				27604C1118C2709200FB085C /* NSDictionary+Accessing.h */,
 				27604C1218C2709200FB085C /* NSDictionary+Accessing.m */,
 				27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */,
@@ -159,6 +174,8 @@
 				270619F9193F6C07005C2F40 /* NSString+Hashing.m */,
 				27604C1718C2709200FB085C /* NSString+URLEncode.h */,
 				27604C1818C2709200FB085C /* NSString+URLEncode.m */,
+				2752601019897CC4004DA285 /* NSValue+URLEncode.h */,
+				2752601119897CC5004DA285 /* NSValue+URLEncode.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -169,6 +186,7 @@
 				27604C1B18C2709200FB085C /* FDNullOrEmpty.h */,
 				27604C1A18C2709200FB085C /* FDLogger.h */,
 				2744FA3A18F0A7D600A9E432 /* FDKeypath.h */,
+				2752600E198975C1004DA285 /* FDURLEncoding.h */,
 				276F313D1940FF0B00116F6B /* FDCache.h */,
 				276F313E1940FF0B00116F6B /* FDCache.m */,
 				27604C1C18C2709200FB085C /* FDThreadSafeMutableDictionary.h */,
@@ -275,10 +293,12 @@
 				27604C2F18C2709200FB085C /* NSObject+PropertyType.m in Sources */,
 				276F313F1940FF0B00116F6B /* FDCache.m in Sources */,
 				27604C2C18C2709200FB085C /* NSString+URLEncode.m in Sources */,
+				2752601619897F4D004DA285 /* NSArray+URLEncode.m in Sources */,
 				27604C3018C2709200FB085C /* FDWeakMutableDictionary.m in Sources */,
 				27604C2E18C2709200FB085C /* FDDeclaredProperty.m in Sources */,
 				27604C2D18C2709200FB085C /* FDThreadSafeMutableDictionary.m in Sources */,
 				27604C3118C2709200FB085C /* FDWeakReference.m in Sources */,
+				2752601219897CC5004DA285 /* NSValue+URLEncode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

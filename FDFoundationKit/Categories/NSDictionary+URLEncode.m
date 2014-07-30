@@ -1,5 +1,6 @@
 #import "NSDictionary+URLEncode.h"
 #import "NSString+URLEncode.h"
+#import "FDLogger.h"
 
 
 #pragma mark Class Definition
@@ -21,12 +22,19 @@
 		{
 			id object = [self objectForKey: key];
 			
-			NSString *urlEncodedKey = [key urlEncode];
-			NSString *urlEncodedObject = [[object description] urlEncode];
-			
-			[encodedMutableString appendFormat: (index == 0 ? @"%@=%@" : @"&%@=%@"), 
-				urlEncodedKey, 
-				urlEncodedObject];
+			if ([object conformsToProtocol: @protocol(FDURLEncoding)] == YES)
+			{
+				NSString *urlEncodedKey = [key urlEncode];
+				NSString *urlEncodedObject = [object urlEncode];
+				
+				[encodedMutableString appendFormat: (index == 0 ? @"%@=%@" : @"&%@=%@"), 
+					urlEncodedKey, 
+					urlEncodedObject];
+			}
+			else
+			{
+				FDLog(FDLogLevelInfo, @"Could not url encode object of class %@ because it does not conform to the FDURLCoding protocol.\nkey:\t%@\nobject:\t%@", [object class], key, object);
+			}
 		}];
 	
 	NSString *encodedString = [NSString stringWithString: encodedMutableString];

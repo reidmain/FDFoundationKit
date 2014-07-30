@@ -4,7 +4,7 @@
 
 #pragma mark Class Interface
 
-@interface NSDictionary (URLEncode) <FDURLEncoding>
+@interface NSArray (URLEncode) <FDURLEncoding>
 
 
 @end
