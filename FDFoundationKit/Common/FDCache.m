@@ -56,7 +56,7 @@
 
 #pragma mark - Overridden Methods
 
-- (NSString *)description
+- (NSString *)debugDescription
 {
 	NSString *description = [NSString stringWithFormat: @"<%@: %p; count = %lu>", 
 		[self class], 
