@@ -6,18 +6,9 @@
 typedef id (^FDValueTransformerBlock)(id value);
 
 
-#pragma mark - Constants
-
-
-#pragma mark - Enumerations
-
-
 #pragma mark - Class Interface
 
 @interface FDValueTransformer : NSValueTransformer
-
-
-#pragma mark - Properties
 
 
 #pragma mark - Constructors
@@ -29,17 +20,14 @@ typedef id (^FDValueTransformerBlock)(id value);
 - (instancetype)initWithBlock: (FDValueTransformerBlock)transformBlock 
 	reverseBlock: (FDValueTransformerBlock)reverseTransformBlock;
 
-+ (void)registerTransformerWithName: (NSString *)name 
-	block: (FDValueTransformerBlock)transformBlock 
-	reverseBlock: (FDValueTransformerBlock)reverseTransformBlock;
-+ (void)registerTransformerWithName: (NSString *)name 
-	block: (FDValueTransformerBlock)transformBlock;
-
 
 #pragma mark - Static Methods
 
-
-#pragma mark - Instance Methods
++ (instancetype)registerTransformerWithName: (NSString *)name 
+	block: (FDValueTransformerBlock)transformBlock 
+	reverseBlock: (FDValueTransformerBlock)reverseTransformBlock;
++ (instancetype)registerTransformerWithName: (NSString *)name 
+	block: (FDValueTransformerBlock)transformBlock;
 
 
 @end

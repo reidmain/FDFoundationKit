@@ -1,20 +1,8 @@
 #import "FDValueTransformer.h"
+#import "FDLogger.h"
 
 
-#pragma mark Constants
-
-
-#pragma mark - Class Extension
-
-@interface FDValueTransformer ()
-
-@end
-
-
-#pragma mark - Class Variables
-
-
-#pragma mark - Class Definition
+#pragma mark Class Definition
 
 @implementation FDValueTransformer
 {
@@ -23,15 +11,12 @@
 }
 
 
-#pragma mark - Properties
-
-
 #pragma mark - Constructors
 
 + (instancetype)transformerWithBlock: (FDValueTransformerBlock)transformBlock 
 	reverseBlock: (FDValueTransformerBlock)reverseTransformBlock
 {
-	FDValueTransformer *transformer = [[FDValueTransformer alloc] 
+	id transformer = [[self alloc] 
 		initWithBlock: transformBlock 
 			reverseBlock: reverseTransformBlock];
 	
@@ -40,7 +25,7 @@
 
 + (instancetype)transformerWithBlock: (FDValueTransformerBlock)transformBlock
 {
-	FDValueTransformer *transformer = [FDValueTransformer transformerWithBlock: transformBlock 
+	id transformer = [self transformerWithBlock: transformBlock 
 		reverseBlock: nil];
 	
 	return transformer;
@@ -66,23 +51,38 @@
 
 #pragma mark - Public Methods
 
-+ (void)registerTransformerWithName: (NSString *)name 
++ (instancetype)registerTransformerWithName: (NSString *)name 
 	block: (FDValueTransformerBlock)transformBlock 
 	reverseBlock: (FDValueTransformerBlock)reverseTransformBlock
 {
-	FDValueTransformer *valueTransformer = [FDValueTransformer transformerWithBlock: transformBlock 
-		reverseBlock: reverseTransformBlock];
+	id transformer = [NSValueTransformer valueTransformerForName: name];
 	
-	[NSValueTransformer setValueTransformer: valueTransformer 
-		forName: name];
+	if (transformer == nil)
+	{
+		transformer = [self transformerWithBlock: transformBlock 
+			reverseBlock: reverseTransformBlock];
+		
+		[NSValueTransformer setValueTransformer: transformer 
+			forName: name];
+	}
+	else if ([transformer isKindOfClass: [self class]] == NO)
+	{
+		FDLog(FDLogLevelDebug, @"There is already a value transformer registered under the name '%@' but it is not a subclass of %@", name, [self class]);
+		
+		transformer = nil;
+	}
+	
+	return transformer;
 }
 
-+ (void)registerTransformerWithName: (NSString *)name 
++ (instancetype)registerTransformerWithName: (NSString *)name 
 	block: (FDValueTransformerBlock)transformBlock
 {
-	[self registerTransformerWithName: name 
+	id transformer = [self registerTransformerWithName: name 
 		block: transformBlock 
 		reverseBlock: nil];
+	
+	return transformer;
 }
 
 
@@ -116,9 +116,6 @@
 	
 	return reverseTransformedValue;
 }
-
-
-#pragma mark - Private Methods
 
 
 @end
