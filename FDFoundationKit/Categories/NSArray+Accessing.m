@@ -14,7 +14,7 @@
 	
 	if ([self count] > 0)
 	{
-		int randomIndex = arc4random() % [self count];
+		NSUInteger randomIndex = arc4random() % [self count];
 		
 		object = [self objectAtIndex: randomIndex];
 	}
