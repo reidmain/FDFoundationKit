@@ -1,25 +1,9 @@
 #import "FDDeclaredProperty.h"
 
 
-#pragma mark Constants
-
-
-#pragma mark - Class Extension
-
-@interface FDDeclaredProperty ()
-
-@end
-
-
-#pragma mark - Class Variables
-
-
-#pragma mark - Class Definition
+#pragma mark Class Definition
 
 @implementation FDDeclaredProperty
-
-
-#pragma mark - Properties
 
 
 #pragma mark - Constructors
@@ -31,7 +15,7 @@
 	
 	// Load the name of the property type.
 	const char *propertyName = property_getName(propertyType);
-	declaredProperty.name = [NSString stringWithUTF8String: propertyName];
+	declaredProperty->_name = [NSString stringWithUTF8String: propertyName];
 	
 	// Load the attribute string for the property type.
 	const char *attributesString = property_getAttributes(propertyType);
@@ -54,7 +38,7 @@
 		className[classNameLength] = '\0';
 		strncpy(className, startOfTypeString, classNameLength);
 		
-		declaredProperty.type = objc_getClass(className);
+		declaredProperty->_type = objc_getClass(className);
 	}
 	// If the property is an id or not an object type extract the @encode type.
 	else
@@ -70,29 +54,12 @@
 			type[typeLength] = '\0';
 			strncpy(type, typeString, typeLength);
 			
-			declaredProperty.encodeType = [NSString stringWithUTF8String: type];
+			declaredProperty->_encodeType = [NSString stringWithUTF8String: type];
 		}
 	}
 	
 	return declaredProperty;
 }
-
-- (id)init
-{
-	// Abort if base initializer fails.
-	if ((self = [super init]) == nil)
-	{
-		return nil;
-	}
-	
-	// Initialize instance variables.
-	
-	// Return initialized instance.
-	return self;
-}
-
-
-#pragma mark - Public Methods
 
 
 #pragma mark - Overridden Methods
@@ -107,9 +74,6 @@
 	
 	return description;
 }
-
-
-#pragma mark - Private Methods
 
 
 @end

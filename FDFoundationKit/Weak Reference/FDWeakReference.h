@@ -14,16 +14,27 @@
 
 #pragma mark Class Interface
 
+/**
+FDWeakRefence is a class designed to encapsulate weak references to Objective-C objects. Primarily used for having weak references in collections.
+*/
 @interface FDWeakReference : NSObject
 
 
 #pragma mark - Properties
 
+/**
+A weak reference to the referenced object.
+*/
 @property (nonatomic, weak) id referencedObject;
 
 
 #pragma mark - Constructors
 
+/**
+Creates a weak reference to the specified object.
+
+@param object The object to reference weakly.
+*/
 + (id)weakReferenceWithObject: (id)object;
 
 
