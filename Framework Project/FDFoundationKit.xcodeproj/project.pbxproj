@@ -113,7 +113,7 @@
 		27604C2518C2709200FB085C /* FDWeakMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDWeakMutableDictionary.m; sourceTree = "<group>"; };
 		27604C2618C2709200FB085C /* FDWeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDWeakReference.h; sourceTree = "<group>"; };
 		27604C2718C2709200FB085C /* FDWeakReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDWeakReference.m; sourceTree = "<group>"; };
-		27604C3E18C2714700FB085C /* FDFoundationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDFoundationKit.h; path = "FDFoundationKit Static Library/FDFoundationKit.h"; sourceTree = SOURCE_ROOT; };
+		27604C3E18C2714700FB085C /* FDFoundationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FDFoundationKit.h; path = "FDFoundationKit Framework/FDFoundationKit.h"; sourceTree = SOURCE_ROOT; };
 		276F313D1940FF0B00116F6B /* FDCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDCache.h; sourceTree = "<group>"; };
 		276F313E1940FF0B00116F6B /* FDCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDCache.m; sourceTree = "<group>"; };
 		27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Modifying.h"; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		2722325618C26A170051677A = {
 			isa = PBXGroup;
 			children = (
-				2722326418C26A180051677A /* FDFoundationKit Static Library */,
+				2722326418C26A180051677A /* FDFoundationKit Framework */,
 				2722326018C26A180051677A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,12 +147,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2722326418C26A180051677A /* FDFoundationKit Static Library */ = {
+		2722326418C26A180051677A /* FDFoundationKit Framework */ = {
 			isa = PBXGroup;
 			children = (
 				27DC1FD118C26AEF006CFD54 /* FDFoundationKit */,
 			);
-			path = "FDFoundationKit Static Library";
+			path = "FDFoundationKit Framework";
 			sourceTree = "<group>";
 		};
 		27604C0E18C2709200FB085C /* Categories */ = {
@@ -235,9 +235,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2722325E18C26A180051677A /* FDFoundationKit */ = {
+		2722325E18C26A180051677A /* FDFoundationKit iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2722328218C26A180051677A /* Build configuration list for PBXNativeTarget "FDFoundationKit" */;
+			buildConfigurationList = 2722328218C26A180051677A /* Build configuration list for PBXNativeTarget "FDFoundationKit iOS" */;
 			buildPhases = (
 				2722325B18C26A180051677A /* Sources */,
 				2722325C18C26A180051677A /* Frameworks */,
@@ -247,7 +247,7 @@
 			);
 			dependencies = (
 			);
-			name = FDFoundationKit;
+			name = "FDFoundationKit iOS";
 			productName = "FDFoundationKit Static Library";
 			productReference = 2722325F18C26A180051677A /* libFDFoundationKit.a */;
 			productType = "com.apple.product-type.library.static";
@@ -261,7 +261,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "1414 Degrees";
 			};
-			buildConfigurationList = 2722325A18C26A170051677A /* Build configuration list for PBXProject "FDFoundationKit Static Library" */;
+			buildConfigurationList = 2722325A18C26A170051677A /* Build configuration list for PBXProject "FDFoundationKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -273,7 +273,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2722325E18C26A180051677A /* FDFoundationKit */,
+				2722325E18C26A180051677A /* FDFoundationKit iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -334,6 +334,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = FDFoundationKit;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +366,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = FDFoundationKit;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -374,9 +376,12 @@
 		2722328318C26A180051677A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/FDFoundationKit_Static_Library.dst;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Reidskie/Development/Personal/FDRequestClient/Framework,
+					"Project/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -384,9 +389,12 @@
 		2722328418C26A180051677A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/FDFoundationKit_Static_Library.dst;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Reidskie/Development/Personal/FDRequestClient/Framework,
+					"Project/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -394,7 +402,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2722325A18C26A170051677A /* Build configuration list for PBXProject "FDFoundationKit Static Library" */ = {
+		2722325A18C26A170051677A /* Build configuration list for PBXProject "FDFoundationKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2722328018C26A180051677A /* Debug */,
@@ -403,7 +411,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2722328218C26A180051677A /* Build configuration list for PBXNativeTarget "FDFoundationKit" */ = {
+		2722328218C26A180051677A /* Build configuration list for PBXNativeTarget "FDFoundationKit iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2722328318C26A180051677A /* Debug */,
