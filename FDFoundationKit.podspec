@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "7.0"
   s.osx.deployment_target = "10.9"
   s.source = { :git => "https://github.com/reidmain/FDFoundationKit.git", :tag => s.version }
-  s.source_files = "FDFoundationKit/**/*.{h,m}", "Static Library Project/FDFoundationKit Static Library/FDFoundationKit.h"
+  s.source_files = "FDFoundationKit/**/*.{h,m}", "Framework Project/FDFoundationKit Framework/FDFoundationKit.h"
   s.framework  = "Foundation"
   s.requires_arc = true
 end
