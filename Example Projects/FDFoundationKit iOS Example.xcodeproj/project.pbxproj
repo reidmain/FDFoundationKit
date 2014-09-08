@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		275EC2F919BDFB52001948CD /* libFDFoundationKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 275EC2F419BDFB3E001948CD /* libFDFoundationKit.a */; };
+		2761AB8619BDF9D1002807C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2761AB8519BDF9D1002807C6 /* main.m */; };
+		2761AB8B19BDF9D1002807C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2761AB8A19BDF9D1002807C6 /* Images.xcassets */; };
+		2761AB8D19BDF9D1002807C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2761AB8C19BDF9D1002807C6 /* InfoPlist.strings */; };
+		2761AB8F19BDF9D1002807C6 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 2761AB8E19BDF9D1002807C6 /* iTunesArtwork */; };
+		2761AB9119BDF9D1002807C6 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 2761AB9019BDF9D1002807C6 /* iTunesArtwork@2x */; };
+		2761ABA319BDF9D1002807C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2761ABA219BDF9D1002807C6 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		275EC2F319BDFB3E001948CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 275EC2EE19BDFB3E001948CD /* FDFoundationKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2722325F18C26A180051677A;
+			remoteInfo = "FDFoundationKit iOS";
+		};
+		275EC2F519BDFB3E001948CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 275EC2EE19BDFB3E001948CD /* FDFoundationKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 27E4982C19B7864800639C30;
+			remoteInfo = "FDFoundationKit OS X";
+		};
+		275EC2F719BDFB4F001948CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 275EC2EE19BDFB3E001948CD /* FDFoundationKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2722325E18C26A180051677A;
+			remoteInfo = "FDFoundationKit iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		275EC2EE19BDFB3E001948CD /* FDFoundationKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FDFoundationKit.xcodeproj; path = "../../Framework Project/FDFoundationKit.xcodeproj"; sourceTree = "<group>"; };
+		2761AB7F19BDF9D1002807C6 /* FDFoundationKit iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FDFoundationKit iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2761AB8319BDF9D1002807C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2761AB8419BDF9D1002807C6 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		2761AB8519BDF9D1002807C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2761AB8719BDF9D1002807C6 /* Entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
+		2761AB8A19BDF9D1002807C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2761AB8C19BDF9D1002807C6 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		2761AB8E19BDF9D1002807C6 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		2761AB9019BDF9D1002807C6 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
+		2761ABA119BDF9D1002807C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2761ABA219BDF9D1002807C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2761AB7C19BDF9D1002807C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275EC2F919BDFB52001948CD /* libFDFoundationKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		275EC2EF19BDFB3E001948CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				275EC2F419BDFB3E001948CD /* libFDFoundationKit.a */,
+				275EC2F619BDFB3E001948CD /* FDFoundationKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2761AB7619BDF9D1002807C6 = {
+			isa = PBXGroup;
+			children = (
+				2761AB8119BDF9D1002807C6 /* FDFoundationKit iOS Example */,
+				2761AB8819BDF9D1002807C6 /* Vendors */,
+				2761AB8019BDF9D1002807C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2761AB8019BDF9D1002807C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2761AB7F19BDF9D1002807C6 /* FDFoundationKit iOS Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2761AB8119BDF9D1002807C6 /* FDFoundationKit iOS Example */ = {
+			isa = PBXGroup;
+			children = (
+				2761AB9519BDF9D1002807C6 /* Classes */,
+				2761AB8919BDF9D1002807C6 /* Resources */,
+				2761AB8219BDF9D1002807C6 /* Supporting Files */,
+			);
+			path = "FDFoundationKit iOS Example";
+			sourceTree = "<group>";
+		};
+		2761AB8219BDF9D1002807C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2761AB8319BDF9D1002807C6 /* Info.plist */,
+				2761AB8419BDF9D1002807C6 /* Prefix.pch */,
+				2761AB8519BDF9D1002807C6 /* main.m */,
+				2761AB8719BDF9D1002807C6 /* Entitlements.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2761AB8819BDF9D1002807C6 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				275EC2EE19BDFB3E001948CD /* FDFoundationKit.xcodeproj */,
+			);
+			name = Vendors;
+			path = "FDFoundationKit iOS Example";
+			sourceTree = "<group>";
+		};
+		2761AB8919BDF9D1002807C6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2761AB8A19BDF9D1002807C6 /* Images.xcassets */,
+				2761AB8C19BDF9D1002807C6 /* InfoPlist.strings */,
+				2761AB8E19BDF9D1002807C6 /* iTunesArtwork */,
+				2761AB9019BDF9D1002807C6 /* iTunesArtwork@2x */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2761AB9519BDF9D1002807C6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2761ABA119BDF9D1002807C6 /* AppDelegate.h */,
+				2761ABA219BDF9D1002807C6 /* AppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2761AB7E19BDF9D1002807C6 /* FDFoundationKit iOS Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2761ABA719BDF9D1002807C6 /* Build configuration list for PBXNativeTarget "FDFoundationKit iOS Example" */;
+			buildPhases = (
+				2761AB7B19BDF9D1002807C6 /* Sources */,
+				2761AB7C19BDF9D1002807C6 /* Frameworks */,
+				2761AB7D19BDF9D1002807C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				275EC2F819BDFB4F001948CD /* PBXTargetDependency */,
+			);
+			name = "FDFoundationKit iOS Example";
+			productName = "FDFoundationKit iOS Example";
+			productReference = 2761AB7F19BDF9D1002807C6 /* FDFoundationKit iOS Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2761AB7719BDF9D1002807C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FD;
+				LastUpgradeCheck = 0600;
+				TargetAttributes = {
+					2761AB7E19BDF9D1002807C6 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = 2761AB7A19BDF9D1002807C6 /* Build configuration list for PBXProject "FDFoundationKit iOS Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2761AB7619BDF9D1002807C6;
+			productRefGroup = 2761AB8019BDF9D1002807C6 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 275EC2EF19BDFB3E001948CD /* Products */;
+					ProjectRef = 275EC2EE19BDFB3E001948CD /* FDFoundationKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				2761AB7E19BDF9D1002807C6 /* FDFoundationKit iOS Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		275EC2F419BDFB3E001948CD /* libFDFoundationKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFDFoundationKit.a;
+			remoteRef = 275EC2F319BDFB3E001948CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		275EC2F619BDFB3E001948CD /* FDFoundationKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FDFoundationKit.framework;
+			remoteRef = 275EC2F519BDFB3E001948CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2761AB7D19BDF9D1002807C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2761AB9119BDF9D1002807C6 /* iTunesArtwork@2x in Resources */,
+				2761AB8B19BDF9D1002807C6 /* Images.xcassets in Resources */,
+				2761AB8F19BDF9D1002807C6 /* iTunesArtwork in Resources */,
+				2761AB8D19BDF9D1002807C6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2761AB7B19BDF9D1002807C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2761AB8619BDF9D1002807C6 /* main.m in Sources */,
+				2761ABA319BDF9D1002807C6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		275EC2F819BDFB4F001948CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "FDFoundationKit iOS";
+			targetProxy = 275EC2F719BDFB4F001948CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2761ABA419BDF9D1002807C6 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "FDFoundationKit iOS Example/Supporting Files/Entitlements.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = AD_HOC;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Ad Hoc";
+		};
+		2761ABA519BDF9D1002807C6 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "FDFoundationKit iOS Example/Supporting Files/Entitlements.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = APP_STORE;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "App Store";
+		};
+		2761ABA619BDF9D1002807C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "FDFoundationKit iOS Example/Supporting Files/Entitlements.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2761ABA819BDF9D1002807C6 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FDFoundationKit iOS Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDFoundationKit iOS Example/Supporting Files/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "Ad Hoc";
+		};
+		2761ABA919BDF9D1002807C6 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FDFoundationKit iOS Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDFoundationKit iOS Example/Supporting Files/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "App Store";
+		};
+		2761ABAA19BDF9D1002807C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FDFoundationKit iOS Example/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "FDFoundationKit iOS Example/Supporting Files/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2761AB7A19BDF9D1002807C6 /* Build configuration list for PBXProject "FDFoundationKit iOS Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2761ABA419BDF9D1002807C6 /* Ad Hoc */,
+				2761ABA519BDF9D1002807C6 /* App Store */,
+				2761ABA619BDF9D1002807C6 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Ad Hoc";
+		};
+		2761ABA719BDF9D1002807C6 /* Build configuration list for PBXNativeTarget "FDFoundationKit iOS Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2761ABA819BDF9D1002807C6 /* Ad Hoc */,
+				2761ABA919BDF9D1002807C6 /* App Store */,
+				2761ABAA19BDF9D1002807C6 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Ad Hoc";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2761AB7719BDF9D1002807C6 /* Project object */;
+}
