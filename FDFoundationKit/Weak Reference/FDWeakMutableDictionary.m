@@ -31,10 +31,13 @@
 - (id)init
 {
 	// Abort if base initializer fails.
-	if ((self = [self initWithCapacity: 0]) == nil)
+	if ((self = [super init]) == nil)
 	{
 		return nil;
 	}
+	
+	// Initialize instance variables.
+	_mutableDictionary = [FDThreadSafeMutableDictionary new];
 	
 	// Return initialized instance.
 	return self;
