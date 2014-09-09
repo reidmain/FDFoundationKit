@@ -12,6 +12,43 @@
 		273A1A7918E4B28B004F96FE /* FDValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 273A1A7818E4B28B004F96FE /* FDValueTransformer.m */; };
 		273A1A7A18E4B30C004F96FE /* FDValueTransformer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 273A1A7718E4B28B004F96FE /* FDValueTransformer.h */; };
 		2744FA3B18F0A82200A9E432 /* FDKeypath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2744FA3A18F0A7D600A9E432 /* FDKeypath.h */; };
+		2751ADAD19BFAB4400844BC5 /* FDFoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C3E18C2714700FB085C /* FDFoundationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADAE19BFAB4D00844BC5 /* NSArray+Accessing.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C0F18C2709200FB085C /* NSArray+Accessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADAF19BFAB4D00844BC5 /* NSArray+Accessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1018C2709200FB085C /* NSArray+Accessing.m */; };
+		2751ADB019BFAB4D00844BC5 /* NSArray+URLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2752601419897F4D004DA285 /* NSArray+URLEncode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADB119BFAB4D00844BC5 /* NSArray+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2752601519897F4D004DA285 /* NSArray+URLEncode.m */; };
+		2751ADB219BFAB4D00844BC5 /* NSDictionary+Accessing.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1118C2709200FB085C /* NSDictionary+Accessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADB319BFAB4D00844BC5 /* NSDictionary+Accessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1218C2709200FB085C /* NSDictionary+Accessing.m */; };
+		2751ADB419BFAB4D00844BC5 /* NSDictionary+Modifying.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADB519BFAB4D00844BC5 /* NSDictionary+Modifying.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A1F5D318CFF40900A77EDD /* NSDictionary+Modifying.m */; };
+		2751ADB619BFAB4D00844BC5 /* NSDictionary+URLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1318C2709200FB085C /* NSDictionary+URLEncode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADB719BFAB4D00844BC5 /* NSDictionary+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1418C2709200FB085C /* NSDictionary+URLEncode.m */; };
+		2751ADB819BFAB4D00844BC5 /* NSObject+PerformBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1518C2709200FB085C /* NSObject+PerformBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADB919BFAB4D00844BC5 /* NSObject+PerformBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1618C2709200FB085C /* NSObject+PerformBlock.m */; };
+		2751ADBA19BFAB4D00844BC5 /* NSString+Hashing.h in Headers */ = {isa = PBXBuildFile; fileRef = 270619F8193F6C07005C2F40 /* NSString+Hashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADBB19BFAB4D00844BC5 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 270619F9193F6C07005C2F40 /* NSString+Hashing.m */; };
+		2751ADBC19BFAB4D00844BC5 /* NSString+URLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1718C2709200FB085C /* NSString+URLEncode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADBD19BFAB4D00844BC5 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1818C2709200FB085C /* NSString+URLEncode.m */; };
+		2751ADBE19BFAB4D00844BC5 /* NSValue+URLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2752601019897CC4004DA285 /* NSValue+URLEncode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADBF19BFAB4D00844BC5 /* NSValue+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2752601119897CC5004DA285 /* NSValue+URLEncode.m */; };
+		2751ADC019BFAB5400844BC5 /* FDNullOrEmpty.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1B18C2709200FB085C /* FDNullOrEmpty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADC119BFAB5400844BC5 /* FDLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1A18C2709200FB085C /* FDLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADC219BFAB5400844BC5 /* FDKeypath.h in Headers */ = {isa = PBXBuildFile; fileRef = 2744FA3A18F0A7D600A9E432 /* FDKeypath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADC319BFAB5400844BC5 /* FDURLEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 2752600E198975C1004DA285 /* FDURLEncoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADC419BFAB5400844BC5 /* FDCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 276F313D1940FF0B00116F6B /* FDCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADC519BFAB5400844BC5 /* FDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 276F313E1940FF0B00116F6B /* FDCache.m */; };
+		2751ADC619BFAB5400844BC5 /* FDThreadSafeMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1C18C2709200FB085C /* FDThreadSafeMutableDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADC719BFAB5400844BC5 /* FDThreadSafeMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1D18C2709200FB085C /* FDThreadSafeMutableDictionary.m */; };
+		2751ADC819BFAB5400844BC5 /* FDValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 273A1A7718E4B28B004F96FE /* FDValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADC919BFAB5400844BC5 /* FDValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 273A1A7818E4B28B004F96FE /* FDValueTransformer.m */; };
+		2751ADCA19BFAB5C00844BC5 /* FDWeakReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C2618C2709200FB085C /* FDWeakReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADCB19BFAB5C00844BC5 /* FDWeakReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C2718C2709200FB085C /* FDWeakReference.m */; };
+		2751ADCC19BFAB5C00844BC5 /* FDWeakMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C2418C2709200FB085C /* FDWeakMutableDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADCD19BFAB5C00844BC5 /* FDWeakMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C2518C2709200FB085C /* FDWeakMutableDictionary.m */; };
+		2751ADCE19BFAB5F00844BC5 /* FDDeclaredProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1F18C2709200FB085C /* FDDeclaredProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADCF19BFAB5F00844BC5 /* FDDeclaredProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C2018C2709200FB085C /* FDDeclaredProperty.m */; };
+		2751ADD019BFAB5F00844BC5 /* NSObject+PropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C2118C2709200FB085C /* NSObject+PropertyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2751ADD119BFAB5F00844BC5 /* NSObject+PropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C2218C2709200FB085C /* NSObject+PropertyType.m */; };
 		2752600F198978D2004DA285 /* FDURLEncoding.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2752600E198975C1004DA285 /* FDURLEncoding.h */; };
 		2752601219897CC5004DA285 /* NSValue+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2752601119897CC5004DA285 /* NSValue+URLEncode.m */; };
 		2752601319897CE2004DA285 /* NSValue+URLEncode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2752601019897CC4004DA285 /* NSValue+URLEncode.h */; };
@@ -123,6 +160,8 @@
 		273A1A7718E4B28B004F96FE /* FDValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDValueTransformer.h; sourceTree = "<group>"; };
 		273A1A7818E4B28B004F96FE /* FDValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDValueTransformer.m; sourceTree = "<group>"; };
 		2744FA3A18F0A7D600A9E432 /* FDKeypath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDKeypath.h; sourceTree = "<group>"; };
+		2751AD8F19BFA84E00844BC5 /* FDFoundationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDFoundationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2751ADA619BFA86B00844BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2752600E198975C1004DA285 /* FDURLEncoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDURLEncoding.h; sourceTree = "<group>"; };
 		2752601019897CC4004DA285 /* NSValue+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+URLEncode.h"; sourceTree = "<group>"; };
 		2752601119897CC5004DA285 /* NSValue+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+URLEncode.m"; sourceTree = "<group>"; };
@@ -167,6 +206,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2751AD8B19BFA84E00844BC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27E4982819B7864800639C30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +236,7 @@
 			children = (
 				2722325F18C26A180051677A /* libFDFoundationKit.a */,
 				27E4982C19B7864800639C30 /* FDFoundationKit.framework */,
+				2751AD8F19BFA84E00844BC5 /* FDFoundationKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,10 +245,19 @@
 			isa = PBXGroup;
 			children = (
 				27DC1FD118C26AEF006CFD54 /* FDFoundationKit */,
+				2751ADA519BFA86B00844BC5 /* iOS Supporting Files */,
 				27E4985719B787A800639C30 /* OS X Supporting Files */,
 			);
 			path = "FDFoundationKit Framework";
 			sourceTree = "<group>";
+		};
+		2751ADA519BFA86B00844BC5 /* iOS Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2751ADA619BFA86B00844BC5 /* Info.plist */,
+			);
+			path = "iOS Supporting Files";
+			sourceTree = SOURCE_ROOT;
 		};
 		27604C0E18C2709200FB085C /* Categories */ = {
 			isa = PBXGroup;
@@ -291,6 +347,34 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		2751AD8C19BFA84E00844BC5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2751ADC219BFAB5400844BC5 /* FDKeypath.h in Headers */,
+				2751ADB219BFAB4D00844BC5 /* NSDictionary+Accessing.h in Headers */,
+				2751ADCA19BFAB5C00844BC5 /* FDWeakReference.h in Headers */,
+				2751ADAE19BFAB4D00844BC5 /* NSArray+Accessing.h in Headers */,
+				2751ADCC19BFAB5C00844BC5 /* FDWeakMutableDictionary.h in Headers */,
+				2751ADB819BFAB4D00844BC5 /* NSObject+PerformBlock.h in Headers */,
+				2751ADD019BFAB5F00844BC5 /* NSObject+PropertyType.h in Headers */,
+				2751ADAD19BFAB4400844BC5 /* FDFoundationKit.h in Headers */,
+				2751ADC419BFAB5400844BC5 /* FDCache.h in Headers */,
+				2751ADC619BFAB5400844BC5 /* FDThreadSafeMutableDictionary.h in Headers */,
+				2751ADB619BFAB4D00844BC5 /* NSDictionary+URLEncode.h in Headers */,
+				2751ADBA19BFAB4D00844BC5 /* NSString+Hashing.h in Headers */,
+				2751ADBC19BFAB4D00844BC5 /* NSString+URLEncode.h in Headers */,
+				2751ADB019BFAB4D00844BC5 /* NSArray+URLEncode.h in Headers */,
+				2751ADCE19BFAB5F00844BC5 /* FDDeclaredProperty.h in Headers */,
+				2751ADC019BFAB5400844BC5 /* FDNullOrEmpty.h in Headers */,
+				2751ADB419BFAB4D00844BC5 /* NSDictionary+Modifying.h in Headers */,
+				2751ADC819BFAB5400844BC5 /* FDValueTransformer.h in Headers */,
+				2751ADC319BFAB5400844BC5 /* FDURLEncoding.h in Headers */,
+				2751ADC119BFAB5400844BC5 /* FDLogger.h in Headers */,
+				2751ADBE19BFAB4D00844BC5 /* NSValue+URLEncode.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27E4982919B7864800639C30 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,6 +423,24 @@
 			productReference = 2722325F18C26A180051677A /* libFDFoundationKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		2751AD8E19BFA84E00844BC5 /* FDFoundationKit iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2751AD9F19BFA84F00844BC5 /* Build configuration list for PBXNativeTarget "FDFoundationKit iOS" */;
+			buildPhases = (
+				2751AD8A19BFA84E00844BC5 /* Sources */,
+				2751AD8B19BFA84E00844BC5 /* Frameworks */,
+				2751AD8C19BFA84E00844BC5 /* Headers */,
+				2751AD8D19BFA84E00844BC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FDFoundationKit iOS";
+			productName = "FDFoundationKit iOS";
+			productReference = 2751AD8F19BFA84E00844BC5 /* FDFoundationKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		27E4982B19B7864800639C30 /* FDFoundationKit OS X */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27E4985119B7864800639C30 /* Build configuration list for PBXNativeTarget "FDFoundationKit OS X" */;
@@ -365,6 +467,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "1414 Degrees";
+				TargetAttributes = {
+					2751AD8E19BFA84E00844BC5 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
 			};
 			buildConfigurationList = 2722325A18C26A170051677A /* Build configuration list for PBXProject "FDFoundationKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -378,6 +485,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				2751AD8E19BFA84E00844BC5 /* FDFoundationKit iOS */,
 				27E4982B19B7864800639C30 /* FDFoundationKit OS X */,
 				2722325E18C26A180051677A /* FDFoundationKit iOS (Static) */,
 			);
@@ -385,6 +493,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2751AD8D19BFA84E00844BC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27E4982A19B7864800639C30 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -415,6 +530,29 @@
 				27604C2D18C2709200FB085C /* FDThreadSafeMutableDictionary.m in Sources */,
 				27604C3118C2709200FB085C /* FDWeakReference.m in Sources */,
 				2752601219897CC5004DA285 /* NSValue+URLEncode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2751AD8A19BFA84E00844BC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2751ADCD19BFAB5C00844BC5 /* FDWeakMutableDictionary.m in Sources */,
+				2751ADC519BFAB5400844BC5 /* FDCache.m in Sources */,
+				2751ADC719BFAB5400844BC5 /* FDThreadSafeMutableDictionary.m in Sources */,
+				2751ADCF19BFAB5F00844BC5 /* FDDeclaredProperty.m in Sources */,
+				2751ADB719BFAB4D00844BC5 /* NSDictionary+URLEncode.m in Sources */,
+				2751ADB919BFAB4D00844BC5 /* NSObject+PerformBlock.m in Sources */,
+				2751ADB119BFAB4D00844BC5 /* NSArray+URLEncode.m in Sources */,
+				2751ADC919BFAB5400844BC5 /* FDValueTransformer.m in Sources */,
+				2751ADBD19BFAB4D00844BC5 /* NSString+URLEncode.m in Sources */,
+				2751ADAF19BFAB4D00844BC5 /* NSArray+Accessing.m in Sources */,
+				2751ADBB19BFAB4D00844BC5 /* NSString+Hashing.m in Sources */,
+				2751ADB319BFAB4D00844BC5 /* NSDictionary+Accessing.m in Sources */,
+				2751ADD119BFAB5F00844BC5 /* NSObject+PropertyType.m in Sources */,
+				2751ADB519BFAB4D00844BC5 /* NSDictionary+Modifying.m in Sources */,
+				2751ADCB19BFAB5C00844BC5 /* FDWeakReference.m in Sources */,
+				2751ADBF19BFAB4D00844BC5 /* NSValue+URLEncode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +597,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -469,7 +608,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -494,6 +633,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -501,7 +641,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -525,6 +665,42 @@
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2751ADA019BFA84F00844BC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "iOS Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2751ADA119BFA84F00844BC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "iOS Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -577,6 +753,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2751AD9F19BFA84F00844BC5 /* Build configuration list for PBXNativeTarget "FDFoundationKit iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2751ADA019BFA84F00844BC5 /* Debug */,
+				2751ADA119BFA84F00844BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		27E4985119B7864800639C30 /* Build configuration list for PBXNativeTarget "FDFoundationKit OS X" */ = {
 			isa = XCConfigurationList;

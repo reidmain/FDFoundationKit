@@ -7,5 +7,5 @@
 	@import QuartzCore;
 	@import UIKit;
 	
-	#import <FDFoundationKit/FDFoundationKit.h>
+	@import FDFoundationKit;
 #endif

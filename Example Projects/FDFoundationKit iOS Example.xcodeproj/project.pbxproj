@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		275EC2F919BDFB52001948CD /* libFDFoundationKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 275EC2F419BDFB3E001948CD /* libFDFoundationKit.a */; };
+		2751ADAC19BFA9F100844BC5 /* FDFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2751ADA919BFA9AD00844BC5 /* FDFoundationKit.framework */; };
 		2761AB8619BDF9D1002807C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2761AB8519BDF9D1002807C6 /* main.m */; };
 		2761AB8B19BDF9D1002807C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2761AB8A19BDF9D1002807C6 /* Images.xcassets */; };
 		2761AB8D19BDF9D1002807C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2761AB8C19BDF9D1002807C6 /* InfoPlist.strings */; };
@@ -17,6 +17,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2751ADA819BFA9AD00844BC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 275EC2EE19BDFB3E001948CD /* FDFoundationKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2751AD8F19BFA84E00844BC5;
+			remoteInfo = "FDFoundationKit iOS";
+		};
+		2751ADAA19BFA9D400844BC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 275EC2EE19BDFB3E001948CD /* FDFoundationKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2751AD8E19BFA84E00844BC5;
+			remoteInfo = "FDFoundationKit iOS";
+		};
 		275EC2F319BDFB3E001948CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 275EC2EE19BDFB3E001948CD /* FDFoundationKit.xcodeproj */;
@@ -30,13 +44,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 27E4982C19B7864800639C30;
 			remoteInfo = "FDFoundationKit OS X";
-		};
-		275EC2F719BDFB4F001948CD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 275EC2EE19BDFB3E001948CD /* FDFoundationKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2722325E18C26A180051677A;
-			remoteInfo = "FDFoundationKit iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -60,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				275EC2F919BDFB52001948CD /* libFDFoundationKit.a in Frameworks */,
+				2751ADAC19BFA9F100844BC5 /* FDFoundationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +77,7 @@
 		275EC2EF19BDFB3E001948CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				2751ADA919BFA9AD00844BC5 /* FDFoundationKit.framework */,
 				275EC2F619BDFB3E001948CD /* FDFoundationKit.framework */,
 				275EC2F419BDFB3E001948CD /* libFDFoundationKit.a */,
 			);
@@ -157,7 +165,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				275EC2F819BDFB4F001948CD /* PBXTargetDependency */,
+				2751ADAB19BFA9D400844BC5 /* PBXTargetDependency */,
 			);
 			name = "FDFoundationKit iOS Example";
 			productName = "FDFoundationKit iOS Example";
@@ -202,6 +210,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		2751ADA919BFA9AD00844BC5 /* FDFoundationKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FDFoundationKit.framework;
+			remoteRef = 2751ADA819BFA9AD00844BC5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		275EC2F419BDFB3E001948CD /* libFDFoundationKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -245,10 +260,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		275EC2F819BDFB4F001948CD /* PBXTargetDependency */ = {
+		2751ADAB19BFA9D400844BC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "FDFoundationKit iOS";
-			targetProxy = 275EC2F719BDFB4F001948CD /* PBXContainerItemProxy */;
+			targetProxy = 2751ADAA19BFA9D400844BC5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
