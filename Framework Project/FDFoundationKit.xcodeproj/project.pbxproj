@@ -465,7 +465,7 @@
 		2722325718C26A170051677A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "1414 Degrees";
 				TargetAttributes = {
 					2751AD8E19BFA84E00844BC5 = {
@@ -775,6 +775,7 @@
 				2751ADA119BFA84F00844BC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27E4985119B7864800639C30 /* Build configuration list for PBXNativeTarget "FDFoundationKit OS X" */ = {
 			isa = XCConfigurationList;
