@@ -322,9 +322,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2722325E18C26A180051677A /* FDFoundationKit iOS */ = {
+		2722325E18C26A180051677A /* FDFoundationKit iOS (Static) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2722328218C26A180051677A /* Build configuration list for PBXNativeTarget "FDFoundationKit iOS" */;
+			buildConfigurationList = 2722328218C26A180051677A /* Build configuration list for PBXNativeTarget "FDFoundationKit iOS (Static)" */;
 			buildPhases = (
 				2722325B18C26A180051677A /* Sources */,
 				2722325C18C26A180051677A /* Frameworks */,
@@ -334,7 +334,7 @@
 			);
 			dependencies = (
 			);
-			name = "FDFoundationKit iOS";
+			name = "FDFoundationKit iOS (Static)";
 			productName = "FDFoundationKit Static Library";
 			productReference = 2722325F18C26A180051677A /* libFDFoundationKit.a */;
 			productType = "com.apple.product-type.library.static";
@@ -378,8 +378,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2722325E18C26A180051677A /* FDFoundationKit iOS */,
 				27E4982B19B7864800639C30 /* FDFoundationKit OS X */,
+				2722325E18C26A180051677A /* FDFoundationKit iOS (Static) */,
 			);
 		};
 /* End PBXProject section */
@@ -569,7 +569,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2722328218C26A180051677A /* Build configuration list for PBXNativeTarget "FDFoundationKit iOS" */ = {
+		2722328218C26A180051677A /* Build configuration list for PBXNativeTarget "FDFoundationKit iOS (Static)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2722328318C26A180051677A /* Debug */,

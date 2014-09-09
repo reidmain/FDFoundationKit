@@ -70,8 +70,8 @@
 		275EC2EF19BDFB3E001948CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				275EC2F419BDFB3E001948CD /* libFDFoundationKit.a */,
 				275EC2F619BDFB3E001948CD /* FDFoundationKit.framework */,
+				275EC2F419BDFB3E001948CD /* libFDFoundationKit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
