@@ -12,14 +12,14 @@
 
 #pragma mark Enumerations
 
-typedef enum
+typedef NS_ENUM(NSUInteger, FDLogLevel)
 {
 	FDLogLevelTrace = 0,
 	FDLogLevelDebug = 1,
 	FDLogLevelInfo = 2,
 	FDLogLevelError = 3,
 	FDLogLevelFatal = 4
-} FDLogLevel;
+};
 
 
 #pragma mark - Constants
