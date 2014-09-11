@@ -1,36 +1,29 @@
 # Overview
-An extension of Foundation Kit used in all of 1414 Degrees' projects. Below are some of the highlights of the project.
+An extension of Foundation Kit used in all of 1414 Degrees' projects.
 
-### FDLogger
-A powerful logging macro with log levels that compiles down to a NOP for release builds.
+Some of the highlights of this project include:
 
-### FDKeypath
-A macro that converts dot syntax property calls on objects to strings to allow for compile time checking.
+**FDLogger:** A powerful logging macro with log levels whose cutoff can be customized based on the build configuration. Also compiles down to a NOP for release builds.
 
-### FDIsEmpty
-A macro that will check if any arbitrary object is "empty".
+**FDKeypath:** A macro for generating key path strings that are checked at compile time.
 
-### FDURLEncoding protocol and corresponding categories
-Adds methods to NSArray, NSDictionary, NSValue and NSString to allow for easy URL encoding. The protocol also allows users to extend this functionality to any of their own custom classes.
+**FDIsEmpty:** A macro that will check if any arbitrary object is "empty".
 
-### FDValueTransformer
-A block based subclass of NSValueTransformer.
+**FDValueTransformer:** A block-based subclass of NSValueTransformer.
 
-### FDDeclaredProperty
-A class that adds an Objective-C wrapper around the metadata associated with property declaration.
+**FDDeclaredProperty:** An Objective-C wrapper around the metadata associated with property declaration. There is also a category on NSObject that allows you to easily retrieve a FDDeclaredProperty for a given key path.
 
-### FDWeakReference
-A class designed to allow for objects to be weakly held inside collection objects i.e. NSArray. Also macros to "weakify" and "strongify" objects particularly self to avoid retain loops.
+**FDWeakReference:** A wrapped class designed to allow any object to be weakly retained inside collection objects i.e. NSArray. Also macros to "weakify" and "strongify" objects, particularly self, to avoid retain loops.
+
+**FDURLEncoding protocol and corresponding categories:** Makes NSArray, NSDictionary, NSValue and NSString conform to the FDURLEncoding protocol which adds a method for easy URL encoding. Users can extend this functionality to their own classes by simply having them conform to the protocol as well.
 
 # Installation
-There are three supported ways to use FDFoundationKit. All three methods assume your Xcode project is using modules.
+There are two supported methods for FDFoundationKit. Both methods assume your Xcode project is using modules.
 
-### 1. Use subprojects
-1. Add the "FDFoundationKit" framework project as a subproject or add it to your workspace.
+### 1. Subprojects
+1. Add the "FDFoundationKit" project inside the "Framework Project" directory as a subproject or add it to your workspace.
 2. Add "FDFoundationKit (iOS/Mac)" to the "Target Dependencies" section of your target.
+3. Use "@import FDFoundationKit" inside any file that will be using FDFoundationKit.
 
 ### 2. CocoaPods
 Simply add `pod "FDFoundationKit", "~> 1.0.0"` to your Podfile.
-
-### 3. Copy source code files
-Copy all the files under the "FDFoundationKit" folder into your project.
