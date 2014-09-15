@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name = "FDFoundationKit"
-  s.version = "0.2.1"
-  s.summary = "1414 Degrees' extension on Foundation Kit."
+  s.version = "1.0.0"
+  s.summary = "An extension of Foundation Kit by 1414 Degrees."
   s.license = { :type => "MIT", :file => "LICENSE.md" }
 
   s.homepage = "https://github.com/reidmain/FDFoundationKit"
