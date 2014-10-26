@@ -18,43 +18,71 @@
 	declaredProperty->_name = [NSString stringWithUTF8String: propertyName];
 	
 	// Load the attribute string for the property type.
-	const char *attributesString = property_getAttributes(propertyType);
+	const char *attributesCString = property_getAttributes(propertyType);
+	NSString *attributesString = [NSString stringWithUTF8String: attributesCString];
 	
-	// If the property is an object type the attribute string should contain a quoted string so look for the first set of quotation marks.
-	const char *startOfTypeString = strchr(attributesString, '"') ;
-	if (startOfTypeString != nil)
+	// Break the attributes string up into its component attributes.
+	NSArray *attributes = [attributesString componentsSeparatedByString: @","];
+	
+	// Iterate over all the attributes and extract the releveant information.
+	for (NSString *attribute in attributes)
 	{
-		// Increment the start of the type string by one to move past the quotation marks.
-		startOfTypeString++;
+		unichar firstCharacter = [attribute characterAtIndex: 0];
 		
-		// Look for the second set of quotation marks.
-		const char *endOfTypeString = strchr(startOfTypeString, '"');
-		
-		// Calculate the length of the class name.
-		size_t classNameLength = endOfTypeString - startOfTypeString;
-		
-		// Extract the class name from the attributes string.
-		char className[classNameLength + 1];
-		className[classNameLength] = '\0';
-		strncpy(className, startOfTypeString, classNameLength);
-		
-		declaredProperty->_type = objc_getClass(className);
-	}
-	// If the property is an id or not an object type extract the @encode type.
-	else
-	{
-		// The attribute string must start with "T" so increment the start of the string by one to get the start of the type string.
-		const char *typeString = attributesString + 1;
-		const char *nextTypeString = NSGetSizeAndAlignment(typeString, nil, nil);
-		if (nextTypeString != nil)
+		// If the first character is a "T" the attribute describes the type of the property.
+		if (firstCharacter == 'T')
 		{
-			size_t typeLength = nextTypeString - typeString;
-			
-			char type[typeLength + 1];
-			type[typeLength] = '\0';
-			strncpy(type, typeString, typeLength);
-			
-			declaredProperty->_encodeType = [NSString stringWithUTF8String: type];
+			// If the attribute contains quotes the property is an object type.
+			if ([attribute containsString: @"\""] == YES)
+			{
+				NSString *typeName = [attribute substringFromIndex: 2];
+				
+				typeName = [typeName stringByReplacingOccurrencesOfString: @"\""
+					withString: @""];
+				
+				declaredProperty->_type = NSClassFromString(typeName);
+			}
+			// If the attribute does not contain quotes the property is an id or non-object type so extract the @encode type.
+			else
+			{
+				NSString *encodeType = [attribute substringFromIndex: 1];
+				declaredProperty->_encodeType = encodeType;
+			}
+		}
+		// If the first character is a "&" the attribute indicates the property retains the value.
+		else if (firstCharacter == '&')
+		{
+			declaredProperty->_memoryManagementPolicy = FDDeclaredPropertyMemoryManagementPolicyRetain;
+		}
+		// If the first character is a "C" the attribute indicates the property copies the value.
+		else if (firstCharacter == 'C')
+		{
+			declaredProperty->_memoryManagementPolicy = FDDeclaredPropertyMemoryManagementPolicyCopy;
+		}
+		// If the first character is a "W" the attribute indicates the property weakly references the value.
+		else if (firstCharacter == 'W')
+		{
+			declaredProperty->_isWeakReference = YES;
+		}
+		// If the first character is a "R" the attribute indicates the property is read-only.
+		else if (firstCharacter == 'R')
+		{
+			declaredProperty->_isReadonly = YES;
+		}
+		// If the first character is a "N" the attribute indicates the property is non-atomic.
+		else if (firstCharacter == 'N')
+		{
+			declaredProperty->_isNonatomic = YES;
+		}
+		// If the first character is a "D" the attribute indicates the property is dynamic.
+		else if (firstCharacter == 'D')
+		{
+			declaredProperty->_isDynamic = YES;
+		}
+		// If the first character is a "V" the attribute describes the name of the backing instance variable of the property.
+		else if (firstCharacter == 'V')
+		{
+			declaredProperty->_backingInstanceVariableName = [attribute substringFromIndex: 1];
 		}
 	}
 	
