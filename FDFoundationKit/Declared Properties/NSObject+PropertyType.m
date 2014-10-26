@@ -1,4 +1,5 @@
 #import "NSObject+PropertyType.h"
+#import "FDThreadSafeMutableDictionary.h"
 #import <objc/runtime.h>
 
 
@@ -17,7 +18,7 @@ static void * const _DeclaredPropertiesForClassKey = (void *)&_DeclaredPropertie
 + (FDDeclaredProperty *)declaredPropertyForName: (NSString *)propertyName
 {
 	// Check if the declared property for the specified name has been cached.
-	NSMutableDictionary *declaredPropertiesByName = [self _declaredPropertiesForClass: self];
+	FDThreadSafeMutableDictionary *declaredPropertiesByName = [self _declaredPropertiesForClass: self];
 	FDDeclaredProperty *declaredProperty = [declaredPropertiesByName objectForKey: propertyName];
 	
 	// If the declared property has not been cached create it from the property metadata.
@@ -85,7 +86,7 @@ static void * const _DeclaredPropertiesForClassKey = (void *)&_DeclaredPropertie
 			NSString *propertyName = [NSString stringWithUTF8String: rawPropertyName];
 			
 			// Check if the declared property for the property type has been cached.
-			NSMutableDictionary *declaredPropertiesByName = [self _declaredPropertiesForClass: self];
+			FDThreadSafeMutableDictionary *declaredPropertiesByName = [self _declaredPropertiesForClass: self];
 			FDDeclaredProperty *declaredProperty = [declaredPropertiesByName objectForKey: propertyName];
 			
 			// If the declared property has not been cached create it from the property type.
@@ -115,13 +116,13 @@ static void * const _DeclaredPropertiesForClassKey = (void *)&_DeclaredPropertie
 
 #pragma mark - Private Methods
 
-+ (NSMutableDictionary *)_declaredPropertiesForClass: (Class)objectClass
++ (FDThreadSafeMutableDictionary *)_declaredPropertiesForClass: (Class)objectClass
 {
 	// Store a dictionary of all the declared properties on the class so subsequent calls for the same property name can be cached.
-	NSMutableDictionary *declaredPropertiesForClass = objc_getAssociatedObject(objectClass, _DeclaredPropertiesForClassKey);
+	FDThreadSafeMutableDictionary *declaredPropertiesForClass = objc_getAssociatedObject(objectClass, _DeclaredPropertiesForClassKey);
 	if (declaredPropertiesForClass == nil)
 	{
-		declaredPropertiesForClass = [NSMutableDictionary dictionary];
+		declaredPropertiesForClass = [FDThreadSafeMutableDictionary new];
 		
 		// TODO: Invesigate the need to wrap this in a dispatch_once because in their two seperate threads could be requesting property info for the first time at the exact same time which could lead to two dictionaries being created and one overwriting the other leading to lost data.
 		objc_setAssociatedObject(objectClass, _DeclaredPropertiesForClassKey, declaredPropertiesForClass, OBJC_ASSOCIATION_RETAIN);
