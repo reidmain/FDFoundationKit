@@ -49,7 +49,7 @@ If type is not nil then this will be nil.
 /**
 The memory management policy of the declared property.
 */
-@property (nonatomic, readonly) FDDeclaredPropertyMemoryManagementPolicy *memoryManagementPolicy;
+@property (nonatomic, readonly) FDDeclaredPropertyMemoryManagementPolicy memoryManagementPolicy;
 
 /**
 A Boolean value that indicates whether or not the declared property is a weak-reference.
