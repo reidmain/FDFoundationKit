@@ -33,7 +33,8 @@
 		if (firstCharacter == 'T')
 		{
 			// If the attribute contains quotes the property is an object type.
-			if ([attribute containsString: @"\""] == YES)
+			NSRange quoteRange = [attribute rangeOfString: @"\""];
+			if (quoteRange.location != NSNotFound)
 			{
 				NSString *typeName = [attribute substringFromIndex: 2];
 				
