@@ -21,13 +21,20 @@ Returns the object associated with the specified key.
 - (id)objectForKey: (id)key;
 
 /**
-Sets the value of the specified key in the cache. The object is weakly retained.
+Associates the object with the specified key in the cache.
 
 @param object The object to store in the cache.
 @param key The key that the object is associated with.
 */
 - (void)setObject: (id)object 
-	forKey: (id)key;
+	forKey: (id<NSCopying>)key;
+
+/**
+Removes the object associated with the specified key.
+
+@param key The key for which to remove the corresponding object.
+*/
+- (void)removeObjectForKey: (id)key;
 
 
 @end

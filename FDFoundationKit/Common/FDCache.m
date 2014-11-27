@@ -34,23 +34,38 @@
 
 - (id)objectForKey: (id)key
 {
-	id object = [_cache objectForKey: key];
-	
-	if (object == nil)
+	@synchronized (self)
 	{
-		object = [_weakDictionary objectForKey: key];
+		id object = [_cache objectForKey: key];
+		
+		if (object == nil)
+		{
+			object = [_weakDictionary objectForKey: key];
+		}
+		
+		return object;
 	}
-	
-	return object;
 }
 
 - (void)setObject: (id)obj 
 	forKey: (id<NSCopying>)key
 {
-	[_cache setObject: obj 
-		forKey: key];
-	[_weakDictionary setObject: obj 
-		forKey: key];
+	@synchronized (self)
+	{
+		[_cache setObject: obj 
+			forKey: key];
+		[_weakDictionary setObject: obj 
+			forKey: key];
+	}
+}
+
+- (void)removeObjectForKey: (id)key
+{
+	@synchronized (self)
+	{
+		[_cache removeObjectForKey: key];
+		[_weakDictionary removeObjectForKey: key];
+	}
 }
 
 
