@@ -68,6 +68,14 @@
 	}
 }
 
+- (NSArray *)allObjects
+{
+	@synchronized (self)
+	{
+		return _weakDictionary.allValues;
+	}
+}
+
 
 #pragma mark - Overridden Methods
 

@@ -36,5 +36,10 @@ Removes the object associated with the specified key.
 */
 - (void)removeObjectForKey: (id)key;
 
+/**
+Returns a new array containing all of the objects stored in the cache.
+*/
+- (NSArray *)allObjects;
+
 
 @end
