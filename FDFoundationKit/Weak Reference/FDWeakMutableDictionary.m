@@ -119,5 +119,21 @@
 	[_mutableDictionary removeObjectForKey: key];
 }
 
+- (NSArray *)allValues
+{
+	// NOTE: The default NSDictionary implementation of allValues cannot be used because it appears that it uses getObjects:andKeys: which breaks because objectForKey: can return back nil which results in nil attempting to be added to NSArray which is impossible and results in an exception. 
+	NSMutableArray *allValues = [NSMutableArray new];
+	
+	[self enumerateKeysAndObjectsUsingBlock: ^(id key, id object, BOOL *stop)
+		{
+			if (object != nil)
+			{
+				[allValues addObject: object];
+			}
+		}];
+	
+	return allValues;
+}
+
 
 @end
