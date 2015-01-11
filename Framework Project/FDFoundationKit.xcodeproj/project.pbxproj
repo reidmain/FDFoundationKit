@@ -81,6 +81,10 @@
 		276F31401941007A00116F6B /* FDCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 276F313D1940FF0B00116F6B /* FDCache.h */; };
 		27A1F5D418CFF40900A77EDD /* NSDictionary+Modifying.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A1F5D318CFF40900A77EDD /* NSDictionary+Modifying.m */; };
 		27A1F5D518CFF4FA00A77EDD /* NSDictionary+Modifying.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */; };
+		27A975F51A61F9DC00214CA4 /* FDFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2751AD8F19BFA84E00844BC5 /* FDFoundationKit.framework */; };
+		27A976051A61FC9600214CA4 /* FDFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E4982C19B7864800639C30 /* FDFoundationKit.framework */; };
+		27A976121A61FFDC00214CA4 /* FDWeakMutableDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A976111A61FFDC00214CA4 /* FDWeakMutableDictionaryTests.m */; };
+		27DBD5C41A6206CE003227DE /* FDWeakMutableDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A976111A61FFDC00214CA4 /* FDWeakMutableDictionaryTests.m */; };
 		27F79DBA19B788AF00E118DB /* NSArray+Accessing.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C0F18C2709200FB085C /* NSArray+Accessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27F79DBB19B788B500E118DB /* NSArray+Accessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1018C2709200FB085C /* NSArray+Accessing.m */; };
 		27F79DBC19B788B900E118DB /* NSArray+URLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2752601419897F4D004DA285 /* NSArray+URLEncode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -119,6 +123,23 @@
 		27F79DDD19B788CF00E118DB /* FDWeakMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C2518C2709200FB085C /* FDWeakMutableDictionary.m */; };
 		27F79DDE19B788ED00E118DB /* FDFoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C3E18C2714700FB085C /* FDFoundationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27A975F61A61F9DC00214CA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2722325718C26A170051677A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2751AD8E19BFA84E00844BC5;
+			remoteInfo = "FDFoundationKit iOS";
+		};
+		27A976061A61FC9600214CA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2722325718C26A170051677A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27E4982B19B7864800639C30;
+			remoteInfo = "FDFoundationKit OS X";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		2722325D18C26A180051677A /* CopyFiles */ = {
@@ -194,6 +215,10 @@
 		276F313E1940FF0B00116F6B /* FDCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDCache.m; sourceTree = "<group>"; };
 		27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Modifying.h"; sourceTree = "<group>"; };
 		27A1F5D318CFF40900A77EDD /* NSDictionary+Modifying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Modifying.m"; sourceTree = "<group>"; };
+		27A975EF1A61F9DC00214CA4 /* FDFoundationKit iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FDFoundationKit iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A975F21A61F9DC00214CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27A975FF1A61FC9600214CA4 /* FDFoundationKit OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FDFoundationKit OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A976111A61FFDC00214CA4 /* FDWeakMutableDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDWeakMutableDictionaryTests.m; sourceTree = "<group>"; };
 		27E4982C19B7864800639C30 /* FDFoundationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDFoundationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E4985819B787A800639C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +238,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27A975EC1A61F9DC00214CA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A975F51A61F9DC00214CA4 /* FDFoundationKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A975FC1A61FC9600214CA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A976051A61FC9600214CA4 /* FDFoundationKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27E4982819B7864800639C30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				2722326418C26A180051677A /* FDFoundationKit Framework */,
+				27A975F01A61F9DC00214CA4 /* FDFoundationKit Tests */,
 				2722326018C26A180051677A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -237,6 +279,8 @@
 				2722325F18C26A180051677A /* libFDFoundationKit.a */,
 				27E4982C19B7864800639C30 /* FDFoundationKit.framework */,
 				2751AD8F19BFA84E00844BC5 /* FDFoundationKit.framework */,
+				27A975EF1A61F9DC00214CA4 /* FDFoundationKit iOS Tests.xctest */,
+				27A975FF1A61FC9600214CA4 /* FDFoundationKit OS X Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -321,6 +365,23 @@
 				27604C2518C2709200FB085C /* FDWeakMutableDictionary.m */,
 			);
 			path = "Weak Reference";
+			sourceTree = "<group>";
+		};
+		27A975F01A61F9DC00214CA4 /* FDFoundationKit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				27A976111A61FFDC00214CA4 /* FDWeakMutableDictionaryTests.m */,
+				27A975F11A61F9DC00214CA4 /* Supporting Files */,
+			);
+			path = "FDFoundationKit Tests";
+			sourceTree = "<group>";
+		};
+		27A975F11A61F9DC00214CA4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27A975F21A61F9DC00214CA4 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		27DC1FD118C26AEF006CFD54 /* FDFoundationKit */ = {
@@ -441,6 +502,42 @@
 			productReference = 2751AD8F19BFA84E00844BC5 /* FDFoundationKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		27A975EE1A61F9DC00214CA4 /* FDFoundationKit iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A975FA1A61F9DC00214CA4 /* Build configuration list for PBXNativeTarget "FDFoundationKit iOS Tests" */;
+			buildPhases = (
+				27A975EB1A61F9DC00214CA4 /* Sources */,
+				27A975EC1A61F9DC00214CA4 /* Frameworks */,
+				27A975ED1A61F9DC00214CA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27A975F71A61F9DC00214CA4 /* PBXTargetDependency */,
+			);
+			name = "FDFoundationKit iOS Tests";
+			productName = "FDFoundationKit iOS Tests";
+			productReference = 27A975EF1A61F9DC00214CA4 /* FDFoundationKit iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27A975FE1A61FC9600214CA4 /* FDFoundationKit OS X Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A976081A61FC9600214CA4 /* Build configuration list for PBXNativeTarget "FDFoundationKit OS X Tests" */;
+			buildPhases = (
+				27A975FB1A61FC9600214CA4 /* Sources */,
+				27A975FC1A61FC9600214CA4 /* Frameworks */,
+				27A975FD1A61FC9600214CA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27A976071A61FC9600214CA4 /* PBXTargetDependency */,
+			);
+			name = "FDFoundationKit OS X Tests";
+			productName = "FDFoundationKit OS X Tests";
+			productReference = 27A975FF1A61FC9600214CA4 /* FDFoundationKit OS X Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		27E4982B19B7864800639C30 /* FDFoundationKit OS X */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27E4985119B7864800639C30 /* Build configuration list for PBXNativeTarget "FDFoundationKit OS X" */;
@@ -471,6 +568,12 @@
 					2751AD8E19BFA84E00844BC5 = {
 						CreatedOnToolsVersion = 6.0;
 					};
+					27A975EE1A61F9DC00214CA4 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					27A975FE1A61FC9600214CA4 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 				};
 			};
 			buildConfigurationList = 2722325A18C26A170051677A /* Build configuration list for PBXProject "FDFoundationKit" */;
@@ -488,12 +591,28 @@
 				2751AD8E19BFA84E00844BC5 /* FDFoundationKit iOS */,
 				27E4982B19B7864800639C30 /* FDFoundationKit OS X */,
 				2722325E18C26A180051677A /* FDFoundationKit iOS (Static) */,
+				27A975EE1A61F9DC00214CA4 /* FDFoundationKit iOS Tests */,
+				27A975FE1A61FC9600214CA4 /* FDFoundationKit OS X Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2751AD8D19BFA84E00844BC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A975ED1A61F9DC00214CA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A975FD1A61FC9600214CA4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -556,6 +675,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27A975EB1A61F9DC00214CA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A976121A61FFDC00214CA4 /* FDWeakMutableDictionaryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A975FB1A61FC9600214CA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27DBD5C41A6206CE003227DE /* FDWeakMutableDictionaryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27E4982719B7864800639C30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -580,6 +715,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27A975F71A61F9DC00214CA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2751AD8E19BFA84E00844BC5 /* FDFoundationKit iOS */;
+			targetProxy = 27A975F61A61F9DC00214CA4 /* PBXContainerItemProxy */;
+		};
+		27A976071A61FC9600214CA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27E4982B19B7864800639C30 /* FDFoundationKit OS X */;
+			targetProxy = 27A976061A61FC9600214CA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2722328018C26A180051677A /* Debug */ = {
@@ -707,6 +855,67 @@
 			};
 			name = Release;
 		};
+		27A975F81A61F9DC00214CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FDFoundationKit Tests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		27A975F91A61F9DC00214CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FDFoundationKit Tests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		27A976091A61FC9600214CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FDFoundationKit Tests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		27A9760A1A61FC9600214CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FDFoundationKit Tests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		27E4985219B7864800639C30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -776,6 +985,24 @@
 			buildConfigurations = (
 				2751ADA019BFA84F00844BC5 /* Debug */,
 				2751ADA119BFA84F00844BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27A975FA1A61F9DC00214CA4 /* Build configuration list for PBXNativeTarget "FDFoundationKit iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A975F81A61F9DC00214CA4 /* Debug */,
+				27A975F91A61F9DC00214CA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27A976081A61FC9600214CA4 /* Build configuration list for PBXNativeTarget "FDFoundationKit OS X Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A976091A61FC9600214CA4 /* Debug */,
+				27A9760A1A61FC9600214CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
