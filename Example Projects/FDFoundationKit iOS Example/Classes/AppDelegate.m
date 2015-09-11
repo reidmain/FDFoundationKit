@@ -1,7 +1,7 @@
 #import "AppDelegate.h"
 
 
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation AppDelegate
 {
@@ -21,11 +21,6 @@
 		initWithFrame: mainScreen.bounds];
 	
 	_mainWindow.backgroundColor = [UIColor blackColor];
-	
-	// TODO: Create the root view controller for the window.
-	
-	// Test the creation of FDWeakMutableDictionary.
-	FDWeakMutableDictionary *weakMutableDictionary = [FDWeakMutableDictionary new];
 	
 	// Show the main window.
 	[_mainWindow makeKeyAndVisible];

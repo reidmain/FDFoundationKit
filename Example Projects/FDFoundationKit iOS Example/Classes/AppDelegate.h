@@ -1,7 +1,9 @@
-#pragma mark Class Interface
+#pragma mark - Class Interface
 
-@interface AppDelegate : UIResponder<
-	UIApplicationDelegate>
+@interface AppDelegate : UIResponder
+<
+	UIApplicationDelegate
+>
 
 
 @end
