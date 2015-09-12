@@ -1,5 +1,4 @@
 #import "FDValueTransformer.h"
-#import "FDLogger.h"
 
 
 #pragma mark Class Definition
@@ -67,7 +66,7 @@
 	}
 	else if ([transformer isKindOfClass: [self class]] == NO)
 	{
-		FDLog(FDLogLevelDebug, @"There is already a value transformer registered under the name '%@' but it is not a subclass of %@", name, [self class]);
+//		FDLog(FDLogLevelDebug, @"There is already a value transformer registered under the name '%@' but it is not a subclass of %@", name, [self class]);
 		
 		transformer = nil;
 	}

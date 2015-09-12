@@ -42,8 +42,6 @@
 		2751ADCD19BFAB5C00844BC5 /* FDWeakMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C2518C2709200FB085C /* FDWeakMutableDictionary.m */; };
 		2751ADCE19BFAB5F00844BC5 /* FDDeclaredProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1F18C2709200FB085C /* FDDeclaredProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2751ADCF19BFAB5F00844BC5 /* FDDeclaredProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C2018C2709200FB085C /* FDDeclaredProperty.m */; };
-		2751ADD019BFAB5F00844BC5 /* NSObject+PropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C2118C2709200FB085C /* NSObject+PropertyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2751ADD119BFAB5F00844BC5 /* NSObject+PropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C2218C2709200FB085C /* NSObject+PropertyType.m */; };
 		2763B1801BA29AE80049D036 /* FDWeakMutableDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763B17F1BA29AE80049D036 /* FDWeakMutableDictionaryTests.m */; settings = {ASSET_TAGS = (); }; };
 		2763B1811BA29AE80049D036 /* FDWeakMutableDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763B17F1BA29AE80049D036 /* FDWeakMutableDictionaryTests.m */; settings = {ASSET_TAGS = (); }; };
 		27994A601BA2A5C700B40846 /* FDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 276F313E1940FF0B00116F6B /* FDCache.m */; };
@@ -58,7 +56,6 @@
 		27994A691BA2A5C700B40846 /* NSDictionary+Modifying.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A1F5D318CFF40900A77EDD /* NSDictionary+Modifying.m */; };
 		27994A6A1BA2A5C700B40846 /* NSDictionary+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1418C2709200FB085C /* NSDictionary+URLEncode.m */; };
 		27994A6B1BA2A5C700B40846 /* NSObject+PerformBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1618C2709200FB085C /* NSObject+PerformBlock.m */; };
-		27994A6C1BA2A5C700B40846 /* NSObject+PropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C2218C2709200FB085C /* NSObject+PropertyType.m */; };
 		27994A6D1BA2A5C700B40846 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 270619F9193F6C07005C2F40 /* NSString+Hashing.m */; };
 		27994A6E1BA2A5C700B40846 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C1818C2709200FB085C /* NSString+URLEncode.m */; };
 		27994A6F1BA2A5C700B40846 /* NSValue+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2752601119897CC5004DA285 /* NSValue+URLEncode.m */; };
@@ -68,7 +65,6 @@
 		27994A751BA2A5C700B40846 /* NSArray+Accessing.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C0F18C2709200FB085C /* NSArray+Accessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27994A761BA2A5C700B40846 /* FDWeakMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C2418C2709200FB085C /* FDWeakMutableDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27994A771BA2A5C700B40846 /* NSObject+PerformBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1518C2709200FB085C /* NSObject+PerformBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27994A781BA2A5C700B40846 /* NSObject+PropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C2118C2709200FB085C /* NSObject+PropertyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27994A791BA2A5C700B40846 /* FDFoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C3E18C2714700FB085C /* FDFoundationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27994A7A1BA2A5C700B40846 /* FDCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 276F313D1940FF0B00116F6B /* FDCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27994A7B1BA2A5C700B40846 /* FDThreadSafeMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1C18C2709200FB085C /* FDThreadSafeMutableDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -83,6 +79,20 @@
 		27994A841BA2A5C700B40846 /* FDURLEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 2752600E198975C1004DA285 /* FDURLEncoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27994A851BA2A5C700B40846 /* FDLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1A18C2709200FB085C /* FDLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27994A861BA2A5C700B40846 /* NSValue+URLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2752601019897CC4004DA285 /* NSValue+URLEncode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27994AA41BA3C4CB00B40846 /* FDDeclaredPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27994AA01BA3C4CB00B40846 /* FDDeclaredPropertyTests.m */; settings = {ASSET_TAGS = (); }; };
+		27994AA51BA3C4CB00B40846 /* FDDeclaredPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27994AA01BA3C4CB00B40846 /* FDDeclaredPropertyTests.m */; settings = {ASSET_TAGS = (); }; };
+		27994AA61BA3C4CB00B40846 /* FDKeypathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27994AA11BA3C4CB00B40846 /* FDKeypathTests.m */; settings = {ASSET_TAGS = (); }; };
+		27994AA71BA3C4CB00B40846 /* FDKeypathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27994AA11BA3C4CB00B40846 /* FDKeypathTests.m */; settings = {ASSET_TAGS = (); }; };
+		27994AAA1BA3C58100B40846 /* NSObject+DeclaredProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 27994AA81BA3C58100B40846 /* NSObject+DeclaredProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27994AAB1BA3C58100B40846 /* NSObject+DeclaredProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 27994AA81BA3C58100B40846 /* NSObject+DeclaredProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27994AAC1BA3C58100B40846 /* NSObject+DeclaredProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 27994AA81BA3C58100B40846 /* NSObject+DeclaredProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27994AAD1BA3C58100B40846 /* NSObject+DeclaredProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 27994AA91BA3C58100B40846 /* NSObject+DeclaredProperty.m */; settings = {ASSET_TAGS = (); }; };
+		27994AAE1BA3C58100B40846 /* NSObject+DeclaredProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 27994AA91BA3C58100B40846 /* NSObject+DeclaredProperty.m */; settings = {ASSET_TAGS = (); }; };
+		27994AAF1BA3C58100B40846 /* NSObject+DeclaredProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 27994AA91BA3C58100B40846 /* NSObject+DeclaredProperty.m */; settings = {ASSET_TAGS = (); }; };
+		27994AC11BA3C65400B40846 /* FDDeclaredPropertyTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27994AB21BA3C62300B40846 /* FDDeclaredPropertyTestModel.m */; settings = {ASSET_TAGS = (); }; };
+		27994AC21BA3C65400B40846 /* FDDeclaredPropertyTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27994AB21BA3C62300B40846 /* FDDeclaredPropertyTestModel.m */; settings = {ASSET_TAGS = (); }; };
+		27994AC31BA3C65700B40846 /* FDDeclaredPropertyTestModelSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 27994AB41BA3C62300B40846 /* FDDeclaredPropertyTestModelSubclass.m */; settings = {ASSET_TAGS = (); }; };
+		27994AC41BA3C65700B40846 /* FDDeclaredPropertyTestModelSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 27994AB41BA3C62300B40846 /* FDDeclaredPropertyTestModelSubclass.m */; settings = {ASSET_TAGS = (); }; };
 		27A975F51A61F9DC00214CA4 /* FDFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2751AD8F19BFA84E00844BC5 /* FDFoundationKit.framework */; };
 		27A976051A61FC9600214CA4 /* FDFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E4982C19B7864800639C30 /* FDFoundationKit.framework */; };
 		27F79DBA19B788AF00E118DB /* NSArray+Accessing.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C0F18C2709200FB085C /* NSArray+Accessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -115,8 +125,6 @@
 		27F79DD519B788C200E118DB /* FDValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 273A1A7818E4B28B004F96FE /* FDValueTransformer.m */; };
 		27F79DD619B788CA00E118DB /* FDDeclaredProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C1F18C2709200FB085C /* FDDeclaredProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27F79DD719B788CA00E118DB /* FDDeclaredProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C2018C2709200FB085C /* FDDeclaredProperty.m */; };
-		27F79DD819B788CA00E118DB /* NSObject+PropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C2118C2709200FB085C /* NSObject+PropertyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27F79DD919B788CA00E118DB /* NSObject+PropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C2218C2709200FB085C /* NSObject+PropertyType.m */; };
 		27F79DDA19B788CF00E118DB /* FDWeakReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C2618C2709200FB085C /* FDWeakReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27F79DDB19B788CF00E118DB /* FDWeakReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 27604C2718C2709200FB085C /* FDWeakReference.m */; };
 		27F79DDC19B788CF00E118DB /* FDWeakMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 27604C2418C2709200FB085C /* FDWeakMutableDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -170,8 +178,6 @@
 		27604C1D18C2709200FB085C /* FDThreadSafeMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDThreadSafeMutableDictionary.m; sourceTree = "<group>"; };
 		27604C1F18C2709200FB085C /* FDDeclaredProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDDeclaredProperty.h; sourceTree = "<group>"; };
 		27604C2018C2709200FB085C /* FDDeclaredProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDDeclaredProperty.m; sourceTree = "<group>"; };
-		27604C2118C2709200FB085C /* NSObject+PropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertyType.h"; sourceTree = "<group>"; };
-		27604C2218C2709200FB085C /* NSObject+PropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyType.m"; sourceTree = "<group>"; };
 		27604C2418C2709200FB085C /* FDWeakMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDWeakMutableDictionary.h; sourceTree = "<group>"; };
 		27604C2518C2709200FB085C /* FDWeakMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDWeakMutableDictionary.m; sourceTree = "<group>"; };
 		27604C2618C2709200FB085C /* FDWeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDWeakReference.h; sourceTree = "<group>"; };
@@ -182,6 +188,14 @@
 		276F313E1940FF0B00116F6B /* FDCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDCache.m; sourceTree = "<group>"; };
 		27994A8B1BA2A5C700B40846 /* FDFoundationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDFoundationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27994A8E1BA2A63900B40846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27994AA01BA3C4CB00B40846 /* FDDeclaredPropertyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDDeclaredPropertyTests.m; sourceTree = "<group>"; };
+		27994AA11BA3C4CB00B40846 /* FDKeypathTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDKeypathTests.m; sourceTree = "<group>"; };
+		27994AA81BA3C58100B40846 /* NSObject+DeclaredProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DeclaredProperty.h"; sourceTree = "<group>"; };
+		27994AA91BA3C58100B40846 /* NSObject+DeclaredProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DeclaredProperty.m"; sourceTree = "<group>"; };
+		27994AB11BA3C62300B40846 /* FDDeclaredPropertyTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDDeclaredPropertyTestModel.h; sourceTree = "<group>"; };
+		27994AB21BA3C62300B40846 /* FDDeclaredPropertyTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDDeclaredPropertyTestModel.m; sourceTree = "<group>"; };
+		27994AB31BA3C62300B40846 /* FDDeclaredPropertyTestModelSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDDeclaredPropertyTestModelSubclass.h; sourceTree = "<group>"; };
+		27994AB41BA3C62300B40846 /* FDDeclaredPropertyTestModelSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDDeclaredPropertyTestModelSubclass.m; sourceTree = "<group>"; };
 		27A1F5D218CFF40900A77EDD /* NSDictionary+Modifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Modifying.h"; sourceTree = "<group>"; };
 		27A1F5D318CFF40900A77EDD /* NSDictionary+Modifying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Modifying.m"; sourceTree = "<group>"; };
 		27A975EF1A61F9DC00214CA4 /* FDFoundationKit iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FDFoundationKit iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,8 +333,8 @@
 			children = (
 				27604C1F18C2709200FB085C /* FDDeclaredProperty.h */,
 				27604C2018C2709200FB085C /* FDDeclaredProperty.m */,
-				27604C2118C2709200FB085C /* NSObject+PropertyType.h */,
-				27604C2218C2709200FB085C /* NSObject+PropertyType.m */,
+				27994AA81BA3C58100B40846 /* NSObject+DeclaredProperty.h */,
+				27994AA91BA3C58100B40846 /* NSObject+DeclaredProperty.m */,
 			);
 			path = "Declared Properties";
 			sourceTree = "<group>";
@@ -339,6 +353,9 @@
 		2763B17E1BA29AE80049D036 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				27994AB01BA3C62300B40846 /* Models */,
+				27994AA01BA3C4CB00B40846 /* FDDeclaredPropertyTests.m */,
+				27994AA11BA3C4CB00B40846 /* FDKeypathTests.m */,
 				2763B17F1BA29AE80049D036 /* FDWeakMutableDictionaryTests.m */,
 			);
 			path = Classes;
@@ -351,6 +368,17 @@
 			);
 			path = "watchOS Supporting Files";
 			sourceTree = SOURCE_ROOT;
+		};
+		27994AB01BA3C62300B40846 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27994AB11BA3C62300B40846 /* FDDeclaredPropertyTestModel.h */,
+				27994AB21BA3C62300B40846 /* FDDeclaredPropertyTestModel.m */,
+				27994AB31BA3C62300B40846 /* FDDeclaredPropertyTestModelSubclass.h */,
+				27994AB41BA3C62300B40846 /* FDDeclaredPropertyTestModelSubclass.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
 		};
 		27A975F01A61F9DC00214CA4 /* FDFoundationKit Tests */ = {
 			isa = PBXGroup;
@@ -403,7 +431,7 @@
 				2751ADAE19BFAB4D00844BC5 /* NSArray+Accessing.h in Headers */,
 				2751ADCC19BFAB5C00844BC5 /* FDWeakMutableDictionary.h in Headers */,
 				2751ADB819BFAB4D00844BC5 /* NSObject+PerformBlock.h in Headers */,
-				2751ADD019BFAB5F00844BC5 /* NSObject+PropertyType.h in Headers */,
+				27994AAA1BA3C58100B40846 /* NSObject+DeclaredProperty.h in Headers */,
 				2751ADAD19BFAB4400844BC5 /* FDFoundationKit.h in Headers */,
 				2751ADC419BFAB5400844BC5 /* FDCache.h in Headers */,
 				2751ADC619BFAB5400844BC5 /* FDThreadSafeMutableDictionary.h in Headers */,
@@ -431,7 +459,7 @@
 				27994A751BA2A5C700B40846 /* NSArray+Accessing.h in Headers */,
 				27994A761BA2A5C700B40846 /* FDWeakMutableDictionary.h in Headers */,
 				27994A771BA2A5C700B40846 /* NSObject+PerformBlock.h in Headers */,
-				27994A781BA2A5C700B40846 /* NSObject+PropertyType.h in Headers */,
+				27994AAB1BA3C58100B40846 /* NSObject+DeclaredProperty.h in Headers */,
 				27994A791BA2A5C700B40846 /* FDFoundationKit.h in Headers */,
 				27994A7A1BA2A5C700B40846 /* FDCache.h in Headers */,
 				27994A7B1BA2A5C700B40846 /* FDThreadSafeMutableDictionary.h in Headers */,
@@ -460,10 +488,10 @@
 				27F79DD419B788C200E118DB /* FDValueTransformer.h in Headers */,
 				27F79DDA19B788CF00E118DB /* FDWeakReference.h in Headers */,
 				27F79DBA19B788AF00E118DB /* NSArray+Accessing.h in Headers */,
+				27994AAC1BA3C58100B40846 /* NSObject+DeclaredProperty.h in Headers */,
 				27F79DD019B788C200E118DB /* FDCache.h in Headers */,
 				27F79DCE19B788C200E118DB /* FDKeypath.h in Headers */,
 				27F79DCF19B788C200E118DB /* FDURLEncoding.h in Headers */,
-				27F79DD819B788CA00E118DB /* NSObject+PropertyType.h in Headers */,
 				27F79DD619B788CA00E118DB /* FDDeclaredProperty.h in Headers */,
 				27F79DBE19B788B900E118DB /* NSDictionary+Accessing.h in Headers */,
 				27F79DDC19B788CF00E118DB /* FDWeakMutableDictionary.h in Headers */,
@@ -655,6 +683,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2751ADC519BFAB5400844BC5 /* FDCache.m in Sources */,
+				27994AAD1BA3C58100B40846 /* NSObject+DeclaredProperty.m in Sources */,
 				2751ADCF19BFAB5F00844BC5 /* FDDeclaredProperty.m in Sources */,
 				2751ADC719BFAB5400844BC5 /* FDThreadSafeMutableDictionary.m in Sources */,
 				2751ADC919BFAB5400844BC5 /* FDValueTransformer.m in Sources */,
@@ -666,7 +695,6 @@
 				2751ADB519BFAB4D00844BC5 /* NSDictionary+Modifying.m in Sources */,
 				2751ADB719BFAB4D00844BC5 /* NSDictionary+URLEncode.m in Sources */,
 				2751ADB919BFAB4D00844BC5 /* NSObject+PerformBlock.m in Sources */,
-				2751ADD119BFAB5F00844BC5 /* NSObject+PropertyType.m in Sources */,
 				2751ADBB19BFAB4D00844BC5 /* NSString+Hashing.m in Sources */,
 				2751ADBD19BFAB4D00844BC5 /* NSString+URLEncode.m in Sources */,
 				2751ADBF19BFAB4D00844BC5 /* NSValue+URLEncode.m in Sources */,
@@ -678,6 +706,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27994A601BA2A5C700B40846 /* FDCache.m in Sources */,
+				27994AAE1BA3C58100B40846 /* NSObject+DeclaredProperty.m in Sources */,
 				27994A611BA2A5C700B40846 /* FDDeclaredProperty.m in Sources */,
 				27994A621BA2A5C700B40846 /* FDThreadSafeMutableDictionary.m in Sources */,
 				27994A631BA2A5C700B40846 /* FDValueTransformer.m in Sources */,
@@ -689,7 +718,6 @@
 				27994A691BA2A5C700B40846 /* NSDictionary+Modifying.m in Sources */,
 				27994A6A1BA2A5C700B40846 /* NSDictionary+URLEncode.m in Sources */,
 				27994A6B1BA2A5C700B40846 /* NSObject+PerformBlock.m in Sources */,
-				27994A6C1BA2A5C700B40846 /* NSObject+PropertyType.m in Sources */,
 				27994A6D1BA2A5C700B40846 /* NSString+Hashing.m in Sources */,
 				27994A6E1BA2A5C700B40846 /* NSString+URLEncode.m in Sources */,
 				27994A6F1BA2A5C700B40846 /* NSValue+URLEncode.m in Sources */,
@@ -700,6 +728,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27994AC41BA3C65700B40846 /* FDDeclaredPropertyTestModelSubclass.m in Sources */,
+				27994AC21BA3C65400B40846 /* FDDeclaredPropertyTestModel.m in Sources */,
+				27994AA41BA3C4CB00B40846 /* FDDeclaredPropertyTests.m in Sources */,
+				27994AA61BA3C4CB00B40846 /* FDKeypathTests.m in Sources */,
 				2763B1801BA29AE80049D036 /* FDWeakMutableDictionaryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -708,6 +740,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27994AC31BA3C65700B40846 /* FDDeclaredPropertyTestModelSubclass.m in Sources */,
+				27994AC11BA3C65400B40846 /* FDDeclaredPropertyTestModel.m in Sources */,
+				27994AA51BA3C4CB00B40846 /* FDDeclaredPropertyTests.m in Sources */,
+				27994AA71BA3C4CB00B40846 /* FDKeypathTests.m in Sources */,
 				2763B1811BA29AE80049D036 /* FDWeakMutableDictionaryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,6 +753,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27F79DD119B788C200E118DB /* FDCache.m in Sources */,
+				27994AAF1BA3C58100B40846 /* NSObject+DeclaredProperty.m in Sources */,
 				27F79DD719B788CA00E118DB /* FDDeclaredProperty.m in Sources */,
 				27F79DD319B788C200E118DB /* FDThreadSafeMutableDictionary.m in Sources */,
 				27F79DD519B788C200E118DB /* FDValueTransformer.m in Sources */,
@@ -728,7 +765,6 @@
 				27F79DC119B788B900E118DB /* NSDictionary+Modifying.m in Sources */,
 				27F79DC319B788B900E118DB /* NSDictionary+URLEncode.m in Sources */,
 				27F79DC519B788B900E118DB /* NSObject+PerformBlock.m in Sources */,
-				27F79DD919B788CA00E118DB /* NSObject+PropertyType.m in Sources */,
 				27F79DC719B788B900E118DB /* NSString+Hashing.m in Sources */,
 				27F79DC919B788B900E118DB /* NSString+URLEncode.m in Sources */,
 				27F79DCB19B788B900E118DB /* NSValue+URLEncode.m in Sources */,

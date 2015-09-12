@@ -32,22 +32,139 @@
 		// If the first character is a "T" the attribute describes the type of the property.
 		if (firstCharacter == 'T')
 		{
-			// If the attribute contains quotes the property is an object type.
-			NSRange quoteRange = [attribute rangeOfString: @"\""];
-			if (quoteRange.location != NSNotFound)
+			unichar encodeType = [attribute characterAtIndex: 1];
+			switch (encodeType)
 			{
-				NSString *typeName = [attribute substringFromIndex: 2];
+				case 'c':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingChar;
+					
+					break;
+				}
 				
-				typeName = [typeName stringByReplacingOccurrencesOfString: @"\""
-					withString: @""];
+				case 'i':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingInt;
+					
+					break;
+				}
 				
-				declaredProperty->_type = NSClassFromString(typeName);
-			}
-			// If the attribute does not contain quotes the property is an id or non-object type so extract the @encode type.
-			else
-			{
-				NSString *encodeType = [attribute substringFromIndex: 1];
-				declaredProperty->_encodeType = encodeType;
+				case 's':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingShort;
+					
+					break;
+				}
+				
+				case 'l':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingLong;
+					
+					break;
+				}
+				
+				case 'q':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingLongLong;
+					
+					break;
+				}
+				
+				case 'C':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingUnsignedChar;
+					
+					break;
+				}
+				
+				case 'I':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingUnsignedInt;
+					
+					break;
+				}
+				
+				case 'S':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingUnsignedShort;
+					
+					break;
+				}
+				
+				case 'L':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingUnsignedLong;
+					
+					break;
+				}
+				
+				case 'Q':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingUnsignedLongLong;
+					
+					break;
+				}
+				
+				case 'f':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingFloat;
+					
+					break;
+				}
+				
+				case 'd':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingDouble;
+					
+					break;
+				}
+				
+				case 'B':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingBool;
+					
+					break;
+				}
+				
+				case '*':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingCharacterString;
+					
+					break;
+				}
+				
+				case '@':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingObject;
+					
+					// If the attribute contains quotes the object class can be extracted.
+					NSRange quoteRange = [attribute rangeOfString: @"\""];
+					if (quoteRange.location != NSNotFound)
+					{
+						NSString *objectClassString = [attribute substringFromIndex: 2];
+						
+						objectClassString = [objectClassString stringByReplacingOccurrencesOfString: @"\""
+							withString: @""];
+						
+						declaredProperty->_objectClass = NSClassFromString(objectClassString);
+					}
+					
+					break;
+				}
+				
+				case '#':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingClass;
+					
+					break;
+				}
+				
+				case ':':
+				{
+					declaredProperty->_typeEncoding = FDDeclaredPropertyTypeEncodingSelector;
+					
+					break;
+				}
 			}
 		}
 		// If the first character is a "&" the attribute indicates the property retains the value.
@@ -68,12 +185,12 @@
 		// If the first character is a "R" the attribute indicates the property is read-only.
 		else if (firstCharacter == 'R')
 		{
-			declaredProperty->_isReadonly = YES;
+			declaredProperty->_isReadOnly = YES;
 		}
 		// If the first character is a "N" the attribute indicates the property is non-atomic.
 		else if (firstCharacter == 'N')
 		{
-			declaredProperty->_isNonatomic = YES;
+			declaredProperty->_isNonAtomic = YES;
 		}
 		// If the first character is a "D" the attribute indicates the property is dynamic.
 		else if (firstCharacter == 'D')
@@ -84,6 +201,16 @@
 		else if (firstCharacter == 'V')
 		{
 			declaredProperty->_backingInstanceVariableName = [attribute substringFromIndex: 1];
+		}
+		// If the first character is a "G" the attribute indicates the property has a custom getter.
+		else if (firstCharacter == 'G')
+		{
+			declaredProperty->_customGetterSelectorName = [attribute substringFromIndex: 1];
+		}
+		// If the first character is a "S" the attribute indicates the property has a custom setter.
+		else if (firstCharacter == 'S')
+		{
+			declaredProperty->_customSetterSelectorName = [attribute substringFromIndex: 1];
 		}
 	}
 	
@@ -99,9 +226,145 @@
 		[self class], 
 		self, 
 		_name, 
-		_type ?: _encodeType];
+		_objectClass ?: [self _typeEncodingAsString]];
 	
 	return description;
+}
+
+
+#pragma mark - Private Methods
+
+- (NSString *)_typeEncodingAsString
+{
+	NSString *typeEncodingAsString = nil;
+	
+	switch (_typeEncoding)
+	{
+		case FDDeclaredPropertyTypeEncodingUnknown:
+		{
+			typeEncodingAsString = @"Unknown";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingChar:
+		{
+			typeEncodingAsString = @"Char";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingInt:
+		{
+			typeEncodingAsString = @"Int";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingShort:
+		{
+			typeEncodingAsString = @"Short";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingLong:
+		{
+			typeEncodingAsString = @"Long";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingLongLong:
+		{
+			typeEncodingAsString = @"Long Long";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingUnsignedChar:
+		{
+			typeEncodingAsString = @"Unsigned Char";
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingUnsignedInt:
+		{
+			typeEncodingAsString = @"Unsigned Int";
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingUnsignedShort:
+		{
+			typeEncodingAsString = @"Unsigned Int";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingUnsignedLong:
+		{
+			typeEncodingAsString = @"Unsigned Long";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingUnsignedLongLong:
+		{
+			typeEncodingAsString = @"Unsigned Long Long";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingFloat:
+		{
+			typeEncodingAsString = @"Float";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingDouble:
+		{
+			typeEncodingAsString = @"Double";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingBool:
+		{
+			typeEncodingAsString = @"Bool";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingCharacterString:
+		{
+			typeEncodingAsString = @"Character String";
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingObject:
+		{
+			typeEncodingAsString = @"Object";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingClass:
+		{
+			typeEncodingAsString = @"Class";
+			
+			break;
+		}
+		
+		case FDDeclaredPropertyTypeEncodingSelector:
+		{
+			typeEncodingAsString = @"Selector";
+			
+			break;
+		}
+	}
+	
+	return typeEncodingAsString;
 }
 
 

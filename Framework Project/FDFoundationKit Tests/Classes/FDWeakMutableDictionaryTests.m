@@ -1,7 +1,7 @@
 @import Foundation;
 @import XCTest;
 
-@import FDFoundationKit;
+#import "FDWeakMutableDictionary.h"
 
 
 @interface FDWeakMutableDictionaryTests : XCTestCase

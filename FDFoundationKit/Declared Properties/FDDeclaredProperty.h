@@ -2,17 +2,39 @@
 @import ObjectiveC;
 
 
-#pragma mark Enumerations
+#pragma mark - Enumerations
+
+typedef NS_ENUM(NSUInteger, FDDeclaredPropertyTypeEncoding)
+{
+    FDDeclaredPropertyTypeEncodingUnknown,
+    FDDeclaredPropertyTypeEncodingChar,
+    FDDeclaredPropertyTypeEncodingInt,
+    FDDeclaredPropertyTypeEncodingShort,
+    FDDeclaredPropertyTypeEncodingLong,
+    FDDeclaredPropertyTypeEncodingLongLong,
+    FDDeclaredPropertyTypeEncodingUnsignedChar,
+    FDDeclaredPropertyTypeEncodingUnsignedInt,
+    FDDeclaredPropertyTypeEncodingUnsignedShort,
+    FDDeclaredPropertyTypeEncodingUnsignedLong,
+    FDDeclaredPropertyTypeEncodingUnsignedLongLong,
+    FDDeclaredPropertyTypeEncodingFloat,
+    FDDeclaredPropertyTypeEncodingDouble,
+    FDDeclaredPropertyTypeEncodingBool,
+    FDDeclaredPropertyTypeEncodingCharacterString,
+    FDDeclaredPropertyTypeEncodingObject,
+    FDDeclaredPropertyTypeEncodingClass,
+	FDDeclaredPropertyTypeEncodingSelector,
+};
 
 typedef NS_ENUM(NSUInteger, FDDeclaredPropertyMemoryManagementPolicy)
 {
-	/// The declared property assigns the value when it is set.
+	/// The value of declared property is assigned when it is set.
     FDDeclaredPropertyMemoryManagementPolicyAssign,
-	
-	/// The declared property retains the value when it is set.
+
+	/// The value of declared property is retained when it is set.	
     FDDeclaredPropertyMemoryManagementPolicyRetain,
 	
-	/// The declared property copies the value when it is set.
+	/// The value of declared property is copied when it is set.
     FDDeclaredPropertyMemoryManagementPolicyCopy,
 };
 
@@ -35,16 +57,14 @@ The name of the declared property.
 /**
 The class of the declared property.
 
-If encodedType is not nil then this will be nil.
+If typeEncoding is FDDeclaredPropertyTypeEncodingObject this will not be nil.
 */
-@property (nonatomic, readonly) Class type;
+@property (nonatomic, readonly) Class objectClass;
 
 /**
 The Objective-C type encoding of the declared property.
-
-If type is not nil then this will be nil.
 */
-@property (nonatomic, readonly) NSString *encodeType;
+@property (nonatomic, readonly) FDDeclaredPropertyTypeEncoding typeEncoding;
 
 /**
 The memory management policy of the declared property.
@@ -59,12 +79,12 @@ A Boolean value that indicates whether or not the declared property is a weak-re
 /**
 A Boolean value that indicates whether or not the declared property is read-only.
 */
-@property (nonatomic, readonly) BOOL isReadonly;
+@property (nonatomic, readonly) BOOL isReadOnly;
 
 /**
 A Boolean value that indicates whether or not the declared property is non-atomic.
 */
-@property (nonatomic, readonly) BOOL isNonatomic;
+@property (nonatomic, readonly) BOOL isNonAtomic;
 
 /**
 A Boolean value that indicates whether or not the declared property is dynamic.
@@ -75,6 +95,16 @@ A Boolean value that indicates whether or not the declared property is dynamic.
 The name of the backing instance variable of the declared property.
 */
 @property (nonatomic, readonly) NSString *backingInstanceVariableName;
+
+/**
+The name of the getter selector of the declared property. This is nil if a custom getter was not defined.
+*/
+@property (nonatomic, readonly) NSString *customGetterSelectorName;
+
+/**
+The name of the setter selector of the declared property. This is nil if a custom setter was not defined.
+*/
+@property (nonatomic, readonly) NSString *customSetterSelectorName;
 
 
 #pragma mark - Constructors

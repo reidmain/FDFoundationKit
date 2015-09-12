@@ -9,7 +9,7 @@
 #import "FDValueTransformer.h"
 
 #import "FDDeclaredProperty.h"
-#import "NSObject+PropertyType.h"
+#import "NSObject+DeclaredProperty.h"
 
 #import "FDWeakReference.h"
 #import "FDWeakMutableDictionary.h"

@@ -1,12 +1,12 @@
 #import "FDDeclaredProperty.h"
 
 
-#pragma mark Class Interface
+#pragma mark - Class Interface
 
 /**
 This category adds methods on NSObject to simplfy the creation of FDDeclaredProperty objects.
 */
-@interface NSObject (PropertyType)
+@interface NSObject (DeclaredProperty)
 
 
 #pragma mark - Static Methods
@@ -18,7 +18,7 @@ Loads the declared property for the specified property name on the receiver.
 
 @return Returns a declared property object if a property with the specified name exists on the receiver otherwise nil.
 */
-+ (FDDeclaredProperty *)declaredPropertyForName: (NSString *)propertyName;
++ (FDDeclaredProperty *)fd_declaredPropertyForName: (NSString *)propertyName;
 
 /**
 Loads the declared property for the specified key path on the receiver.
@@ -27,16 +27,16 @@ Loads the declared property for the specified key path on the receiver.
 
 @return Returns a declared property object if a property exists for the specified key path on the receiver otherwise nil.
 */
-+ (FDDeclaredProperty *)declaredPropertyForKeyPath: (NSString *)keyPath;
++ (FDDeclaredProperty *)fd_declaredPropertyForKeyPath: (NSString *)keyPath;
 
 /**
-Loads all the declared properties on the receiver's class and its subclasses up to and including the specified subclass.
+Loads all the declared properties on the receiver's class and its superclasses up to but not including the specified superclass.
 
-@param subclass A subclass of the receiver.
+@param superclass A superclass of the receiver that is the upper bounds for what properties should be returned. If nil it defaults NSObject.
 
 @param Returns an array of FDDeclaredProperty objects.
 */
-+ (NSArray *)declaredPropertiesForSubclass: (Class)subclass;
++ (NSArray *)fd_declaredPropertiesUntilSuperclass: (Class)superclass;
 
 
 @end

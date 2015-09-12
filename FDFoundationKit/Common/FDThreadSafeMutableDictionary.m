@@ -1,28 +1,12 @@
 #import "FDThreadSafeMutableDictionary.h"
 
 
-#pragma mark Constants
-
-
-#pragma mark - Class Extension
-
-@interface FDThreadSafeMutableDictionary ()
-
-@end
-
-
-#pragma mark - Class Variables
-
-
 #pragma mark - Class Definition
 
 @implementation FDThreadSafeMutableDictionary
 {
 	@private __strong NSMutableDictionary *_mutableDictionary;
 }
-
-
-#pragma mark - Properties
 
 
 #pragma mark - Constructors
@@ -85,11 +69,11 @@
 }
 
 
-#pragma mark - Overridden Methods
+#pragma mark - NSDictionary Overridden Methods
 
 - (NSUInteger)count
 {
-	@synchronized (self)
+	@synchronized (_mutableDictionary)
 	{
 		NSUInteger count = [_mutableDictionary count];
 		
@@ -99,7 +83,7 @@
 
 - (id)objectForKey: (id)key
 {
-	@synchronized (self)
+	@synchronized (_mutableDictionary)
 	{
 		id object = [_mutableDictionary objectForKey: key];
 		
@@ -109,7 +93,7 @@
 
 - (NSEnumerator *)keyEnumerator
 {
-	@synchronized (self)
+	@synchronized (_mutableDictionary)
 	{
 		NSEnumerator *keyEnumerator = [_mutableDictionary keyEnumerator];
 		
@@ -117,10 +101,13 @@
 	}
 }
 
+
+#pragma mark - NSMutableDictionary Overridden Methods
+
 - (void)setObject: (id)object 
 	forKey: (id<NSCopying>)key
 {
-	@synchronized (self)
+	@synchronized (_mutableDictionary)
 	{
 		[_mutableDictionary setObject: object 
 			forKey: key];
@@ -129,7 +116,7 @@
 
 - (void)removeObjectForKey: (id)key
 {
-	@synchronized (self)
+	@synchronized (_mutableDictionary)
 	{
 		[_mutableDictionary removeObjectForKey: key];
 	}

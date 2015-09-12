@@ -1,7 +1,7 @@
 @import Foundation;
 
 
-#pragma mark Class Interface
+#pragma mark - Class Interface
 
 /**
 A subclass of NSMutableDictionary that is thread-safe.

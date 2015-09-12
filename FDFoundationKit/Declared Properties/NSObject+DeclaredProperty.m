@@ -1,6 +1,6 @@
-#import "NSObject+PropertyType.h"
+#import "NSObject+DeclaredProperty.h"
 #import "FDThreadSafeMutableDictionary.h"
-#import <objc/runtime.h>
+@import ObjectiveC.runtime;
 
 
 #pragma mark Constants
@@ -15,17 +15,16 @@ static void * const _DeclaredPropertiesForClassKey = (void *)&_DeclaredPropertie
 
 #pragma mark - Public Methods
 
-+ (FDDeclaredProperty *)declaredPropertyForName: (NSString *)propertyName
++ (FDDeclaredProperty *)fd_declaredPropertyForName: (NSString *)propertyName
 {
 	// Check if the declared property for the specified name has been cached.
-	FDThreadSafeMutableDictionary *declaredPropertiesByName = [self _declaredPropertiesForClass: self];
+	FDThreadSafeMutableDictionary *declaredPropertiesByName = [self fd_declaredPropertiesForClass: self];
 	FDDeclaredProperty *declaredProperty = [declaredPropertiesByName objectForKey: propertyName];
 	
 	// If the declared property has not been cached create it from the property metadata.
 	if(declaredProperty == nil)
 	{
 		objc_property_t propertyType = class_getProperty([self class], [propertyName UTF8String]);
-		
 		if (propertyType == nil)
 		{
 			return nil;
@@ -40,7 +39,7 @@ static void * const _DeclaredPropertiesForClassKey = (void *)&_DeclaredPropertie
 	return declaredProperty;
 }
 
-+ (FDDeclaredProperty *)declaredPropertyForKeyPath: (NSString *)keyPath
++ (FDDeclaredProperty *)fd_declaredPropertyForKeyPath: (NSString *)keyPath
 {
 	// Break the key path into its components.
 	NSArray *keys = [keyPath componentsSeparatedByString:@"."];
@@ -48,7 +47,7 @@ static void * const _DeclaredPropertiesForClassKey = (void *)&_DeclaredPropertie
 	// Get the declared property for the first key.
 	NSString *firstKey = [keys firstObject];
 	
-	FDDeclaredProperty *firstDeclaredProperty = [self declaredPropertyForName: firstKey];
+	FDDeclaredProperty *firstDeclaredProperty = [self fd_declaredPropertyForName: firstKey];
 	
 	// If there is only one key the first declared property can be immediately returned.
 	if ([keys count] == 1)
@@ -56,23 +55,51 @@ static void * const _DeclaredPropertiesForClassKey = (void *)&_DeclaredPropertie
 		return firstDeclaredProperty;
 	}
 	
-	// Create a new key path of the remaining keys.
+	// Create a new key path from the remaining keys.
 	NSArray *remainingKeys = [keys subarrayWithRange: NSMakeRange(1, [keys count] - 1)];
 	NSString *remainingKeyPath = [remainingKeys componentsJoinedByString: @"."];
 	
 	// Get the declared property of the remaining key path on the first declared property.
-	FDDeclaredProperty *declaredProperty = [firstDeclaredProperty.type declaredPropertyForKeyPath: remainingKeyPath];
+	FDDeclaredProperty *declaredProperty = [firstDeclaredProperty.objectClass fd_declaredPropertyForKeyPath: remainingKeyPath];
 	
 	return declaredProperty;
 }
 
-+ (NSArray *)declaredPropertiesForSubclass: (Class)subclass
++ (NSArray *)fd_declaredPropertiesUntilSuperclass: (Class)superclass
 {
-	NSMutableArray *declaredProperties = [NSMutableArray array];
+	// If no superclass was specified default to NSObject.
+	if (superclass == nil)
+	{
+		superclass = [NSObject class];
+	}
+	
+	static FDThreadSafeMutableDictionary *declaredPropertiesByClassUntilSuperClass = nil;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		declaredPropertiesByClassUntilSuperClass = [FDThreadSafeMutableDictionary new];
+	});
+	
+	NSString *key = [NSString stringWithFormat: @"%@->%@", 
+		NSStringFromClass(self), 
+		NSStringFromClass(superclass)];
+	
+	NSMutableArray *declaredProperties = [declaredPropertiesByClassUntilSuperClass objectForKey: key];
+	if (declaredProperties == nil)
+	{
+		declaredProperties = [NSMutableArray array];
+		[declaredPropertiesByClassUntilSuperClass setValue: declaredProperties 
+			forKey: key];
+	}
+	else
+	{
+		return declaredProperties;
+	}
+	
 	NSMutableSet *namesOfDeclaredProperties = [NSMutableSet set];
 	
 	Class objectClass = self;
-	while ([objectClass isSubclassOfClass: subclass] == YES)
+	while (objectClass != superclass 
+		 && [objectClass isSubclassOfClass: superclass] == YES)
 	{
 		unsigned int numberOfProperties = 0;
 		objc_property_t *properties = class_copyPropertyList(objectClass, &numberOfProperties);
@@ -86,7 +113,7 @@ static void * const _DeclaredPropertiesForClassKey = (void *)&_DeclaredPropertie
 			NSString *propertyName = [NSString stringWithUTF8String: rawPropertyName];
 			
 			// Check if the declared property for the property type has been cached.
-			FDThreadSafeMutableDictionary *declaredPropertiesByName = [self _declaredPropertiesForClass: self];
+			FDThreadSafeMutableDictionary *declaredPropertiesByName = [self fd_declaredPropertiesForClass: self];
 			FDDeclaredProperty *declaredProperty = [declaredPropertiesByName objectForKey: propertyName];
 			
 			// If the declared property has not been cached create it from the property type.
@@ -116,7 +143,7 @@ static void * const _DeclaredPropertiesForClassKey = (void *)&_DeclaredPropertie
 
 #pragma mark - Private Methods
 
-+ (FDThreadSafeMutableDictionary *)_declaredPropertiesForClass: (Class)objectClass
++ (FDThreadSafeMutableDictionary *)fd_declaredPropertiesForClass: (Class)objectClass
 {
 	// Store a dictionary of all the declared properties on the class so subsequent calls for the same property name can be cached.
 	FDThreadSafeMutableDictionary *declaredPropertiesForClass = objc_getAssociatedObject(objectClass, _DeclaredPropertiesForClassKey);
@@ -124,7 +151,7 @@ static void * const _DeclaredPropertiesForClassKey = (void *)&_DeclaredPropertie
 	{
 		declaredPropertiesForClass = [FDThreadSafeMutableDictionary new];
 		
-		// TODO: Invesigate the need to wrap this in a dispatch_once because in their two seperate threads could be requesting property info for the first time at the exact same time which could lead to two dictionaries being created and one overwriting the other leading to lost data.
+		// TODO: Invesigate the need to wrap this in a dispatch_once because in theory two seperate threads could be requesting property info for the first time at the exact same time which could lead to two dictionaries being created and one overwriting the other leading to lost data. However it doesn't really matter that much because the next time that lost data is requested it will be properly cached.
 		objc_setAssociatedObject(objectClass, _DeclaredPropertiesForClassKey, declaredPropertiesForClass, OBJC_ASSOCIATION_RETAIN);
 	}
 	
