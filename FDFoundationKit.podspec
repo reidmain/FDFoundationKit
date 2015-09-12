@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
   s.author = "Reid Main"
   s.social_media_url = "http://twitter.com/reidmain"
 
-  s.ios.deployment_target = "7.0"
-  s.osx.deployment_target = "10.9"
+  s.ios.deployment_target = "9.0"
+  s.osx.deployment_target = "10.11"
   s.source = { :git => "https://github.com/reidmain/FDFoundationKit.git", :tag => s.version }
   s.source_files = "FDFoundationKit/**/*.{h,m}", "Framework Project/FDFoundationKit Framework/FDFoundationKit.h"
   s.framework  = "Foundation"
