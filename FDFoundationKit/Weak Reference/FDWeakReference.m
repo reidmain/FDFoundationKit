@@ -1,12 +1,12 @@
 #import "FDWeakReference.h"
 
 
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation FDWeakReference
 
 
-#pragma mark Constructors
+#pragma mark - Initializers
 
 + (id)weakReferenceWithObject: (id)object
 {

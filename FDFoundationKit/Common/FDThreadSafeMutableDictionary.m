@@ -9,7 +9,7 @@
 }
 
 
-#pragma mark - Constructors
+#pragma mark - Initializers
 
 - (instancetype)initWithCapacity: (NSUInteger)capacity
 {

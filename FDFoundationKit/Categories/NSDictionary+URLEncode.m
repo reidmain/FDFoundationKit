@@ -1,16 +1,17 @@
 #import "NSDictionary+URLEncode.h"
-#import "NSString+URLEncode.h"
+
 #import "FDLogger.h"
+#import "NSString+URLEncode.h"
 
 
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation NSDictionary (URLEncode)
 
 
-#pragma mark - Public Methods
+#pragma mark - FDURLEncoding Methods
 
-- (NSString *)urlEncode
+- (NSString *)fd_urlEncode
 {
 	// URL encode each key-object pair in the dictionary and concatonate them together with &.
 	NSMutableString *encodedMutableString = [[NSMutableString alloc] 
@@ -24,8 +25,8 @@
 			
 			if ([object conformsToProtocol: @protocol(FDURLEncoding)] == YES)
 			{
-				NSString *urlEncodedKey = [key urlEncode];
-				NSString *urlEncodedObject = [object urlEncode];
+				NSString *urlEncodedKey = [key fd_urlEncode];
+				NSString *urlEncodedObject = [object fd_urlEncode];
 				
 				[encodedMutableString appendFormat: (index == 0 ? @"%@=%@" : @"&%@=%@"), 
 					urlEncodedKey, 

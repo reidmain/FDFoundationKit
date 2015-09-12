@@ -9,7 +9,7 @@
 
 #pragma mark - Public Methods
 
-- (id)nonNullObjectForKey: (id)key
+- (id)fd_nonNullObjectForKey: (id)key
 {
 	id object = [self objectForKey: key];
 	

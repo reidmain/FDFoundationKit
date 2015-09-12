@@ -1,4 +1,5 @@
 #import "NSString+Hashing.h"
+
 #include <CommonCrypto/CommonDigest.h>
 
 
@@ -9,7 +10,7 @@
 
 #pragma mark - Public Methods
 
-- (NSString *)sha256HashString
+- (NSString *)fd_sha256HashString
 {
 	const char *message = [self UTF8String];
 	unsigned char messageDigest[CC_SHA256_DIGEST_LENGTH];

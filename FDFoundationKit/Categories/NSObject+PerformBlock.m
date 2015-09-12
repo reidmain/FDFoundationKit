@@ -1,14 +1,14 @@
 #import "NSObject+PerformBlock.h"
 
 
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation NSObject (PerformBlock)
 
 
 #pragma mark - Public Methods
 
-- (void)performBlock: (dispatch_block_t)block 
+- (void)fd_performBlock: (dispatch_block_t)block 
 	afterDelay: (NSTimeInterval)delay
 {
 	[self performSelector: @selector(_callBlock:) 
@@ -16,7 +16,7 @@
 		afterDelay: delay];
 }
 
-- (void)performBlockOnMainThread: (dispatch_block_t)block 
+- (void)fd_performBlockOnMainThread: (dispatch_block_t)block 
 	waitUntilDone: (BOOL)waitUntilDone
 {
 	if (waitUntilDone == YES)
@@ -40,13 +40,13 @@
 	}
 }
 
-- (void)performBlockOnMainThread: (dispatch_block_t)block
+- (void)fd_performBlockOnMainThread: (dispatch_block_t)block
 {
-	[self performBlockOnMainThread: block 
+	[self fd_performBlockOnMainThread: block 
 		waitUntilDone: NO];
 }
 
-- (void)performBlockInBackground: (dispatch_block_t)block
+- (void)fd_performBlockInBackground: (dispatch_block_t)block
 {
 	dispatch_queue_t globalQueue = dispatch_get_global_queue(
 		DISPATCH_QUEUE_PRIORITY_BACKGROUND, 

@@ -107,7 +107,7 @@ The name of the setter selector of the declared property. This is nil if a custo
 @property (nonatomic, readonly) NSString *customSetterSelectorName;
 
 
-#pragma mark - Constructors
+#pragma mark - Initializers
 
 /**
 Creates a declared property from the metadata of the specified property type.

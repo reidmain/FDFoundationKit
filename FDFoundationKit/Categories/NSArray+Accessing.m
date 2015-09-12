@@ -1,14 +1,14 @@
 #import "NSArray+Accessing.h"
 
 
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation NSArray (Accessing)
 
 
 #pragma mark - Public Methods
 
-- (id)randomObject
+- (id)fd_randomObject
 {
 	id object = nil;
 	
@@ -22,7 +22,7 @@
 	return object;
 }
 
-- (id)tryObjectAtIndex: (NSUInteger)index
+- (id)fd_tryObjectAtIndex: (NSUInteger)index
 {
 	id object = nil;
 	

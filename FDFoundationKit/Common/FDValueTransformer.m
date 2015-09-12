@@ -1,7 +1,7 @@
 #import "FDValueTransformer.h"
 
 
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation FDValueTransformer
 {
@@ -10,7 +10,7 @@
 }
 
 
-#pragma mark - Constructors
+#pragma mark - Initializers
 
 + (instancetype)transformerWithBlock: (FDValueTransformerBlock)transformBlock 
 	reverseBlock: (FDValueTransformerBlock)reverseTransformBlock

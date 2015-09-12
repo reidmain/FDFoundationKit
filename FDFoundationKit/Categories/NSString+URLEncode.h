@@ -1,15 +1,19 @@
 @import Foundation;
+
 #import "FDURLEncoding.h"
 
 
-#pragma mark Class Interface
+#pragma mark - Class Interface
 
 /**
 This category ensures that NSString conforms to the FDURLEncoding protocol.
 
 It also adds a method to allow for URL decoding.
 */
-@interface NSString (URLEncode) <FDURLEncoding>
+@interface NSString (URLEncode)
+<
+	FDURLEncoding
+>
 
 
 #pragma mark - Instance Methods
@@ -17,7 +21,7 @@ It also adds a method to allow for URL decoding.
 /**
 Returns a string that is receiver URL decoded.
 */
-- (NSString *)urlDecode;
+- (NSString *)fd_urlDecode;
 
 
 @end

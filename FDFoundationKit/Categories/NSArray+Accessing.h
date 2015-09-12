@@ -1,7 +1,7 @@
 @import Foundation;
 
 
-#pragma mark Class Interface
+#pragma mark - Class Interface
 
 /**
 This category adds methods on the NSArray class to make accessing elements easier.
@@ -14,7 +14,7 @@ This category adds methods on the NSArray class to make accessing elements easie
 /**
 Returns a random object in the array.
 */
-- (id)randomObject;
+- (id)fd_randomObject;
 
 /**
 Returns the object located at the specified index, if that index is within the bounds of the array.
@@ -23,7 +23,7 @@ Returns the object located at the specified index, if that index is within the b
 
 @return The object located at index if it is within the bounds of the array otherwise nil.
 */
-- (id)tryObjectAtIndex: (NSUInteger)index;
+- (id)fd_tryObjectAtIndex: (NSUInteger)index;
 
 
 @end

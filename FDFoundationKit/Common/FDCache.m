@@ -1,8 +1,9 @@
 #import "FDCache.h"
+
 #import "FDWeakMutableDictionary.h"
 
 
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation FDCache
 {
@@ -11,7 +12,7 @@
 }
 
 
-#pragma mark - Constructors
+#pragma mark - Initializers
 
 - (id)init
 {
@@ -77,7 +78,7 @@
 }
 
 
-#pragma mark - Overridden Methods
+#pragma mark - NSObject Overridden Methods
 
 - (NSString *)debugDescription
 {

@@ -1,12 +1,12 @@
 #import "FDDeclaredProperty.h"
 
 
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation FDDeclaredProperty
 
 
-#pragma mark - Constructors
+#pragma mark - Initializers
 
 + (instancetype)declaredPropertyForPropertyType: (objc_property_t)propertyType
 {

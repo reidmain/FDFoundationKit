@@ -1,16 +1,17 @@
 #import "NSArray+URLEncode.h"
 #import "NSString+URLEncode.h"
+
 #import "FDLogger.h"
 
 
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation NSArray (URLEncode)
 
 
-#pragma mark - Public Methods
+#pragma mark - FDURLEncoding Methods
 
-- (NSString *)urlEncode
+- (NSString *)fd_urlEncode
 {
 	// URL encode each object in the array and concatonate them together with commas.
 	NSMutableString *encodedMutableString = [[NSMutableString alloc] 
@@ -20,7 +21,7 @@
 		{
 			if ([object conformsToProtocol: @protocol(FDURLEncoding)] == YES)
 			{
-				NSString *urlEncodedObject = [object urlEncode];
+				NSString *urlEncodedObject = [object fd_urlEncode];
 				
 				[encodedMutableString appendFormat: (index == 0 ? @"%@" : @",%@"), 
 					urlEncodedObject];

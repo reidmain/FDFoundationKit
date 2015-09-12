@@ -1,7 +1,7 @@
 @import Foundation;
 
 
-#pragma mark Class Interface
+#pragma mark - Class Interface
 
 /**
 This category adds methods on NSString to provide a variety of hashing functions.
@@ -14,7 +14,7 @@ This category adds methods on NSString to provide a variety of hashing functions
 /**
 Returns the receiver run through a SHA256 hashing function.
 */
-- (NSString *)sha256HashString;
+- (NSString *)fd_sha256HashString;
 
 
 @end

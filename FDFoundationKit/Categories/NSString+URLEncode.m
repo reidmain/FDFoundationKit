@@ -1,14 +1,24 @@
 #import "NSString+URLEncode.h"
 
 
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation NSString (URLEncode)
 
 
 #pragma mark - Public Methods
 
-- (NSString *)urlEncode
+- (NSString *)fd_urlDecode
+{
+	NSString *decodedString = [self stringByRemovingPercentEncoding];
+	
+	return decodedString;
+}
+
+
+#pragma mark - FDURLEncoding Methods
+
+- (NSString *)fd_urlEncode
 {
 	NSString *charactersToEscape = @"!*'();:@&=+$,/?#[]%\" |";
 	NSCharacterSet *characterSetToEscape = [NSCharacterSet characterSetWithCharactersInString: charactersToEscape];
@@ -17,13 +27,6 @@
 	NSString *encodedString = [self stringByAddingPercentEncodingWithAllowedCharacters: allowedCharacters];
 	
 	return encodedString;
-}
-
-- (NSString *)urlDecode
-{
-	NSString *decodedString = [self stringByRemovingPercentEncoding];
-	
-	return decodedString;
 }
 
 

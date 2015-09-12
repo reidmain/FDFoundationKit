@@ -1,7 +1,7 @@
 @import Foundation;
 
 
-#pragma mark Class Interface
+#pragma mark - Class Interface
 
 /**
 This category adds methods on the NSDictionary class to make accessing elements easier.
@@ -18,7 +18,7 @@ Returns the value associated with a given key and ensures that it is not NSNull.
 */
 #pragma mark - Instance Methods
 
-- (id)nonNullObjectForKey: (id)key;
+- (id)fd_nonNullObjectForKey: (id)key;
 
 
 @end

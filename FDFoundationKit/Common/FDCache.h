@@ -1,7 +1,7 @@
 @import Foundation;
 
 
-#pragma mark Class Interface
+#pragma mark - Class Interface
 
 /**
 FDCache is a wrapper object that behaves almost identically to NSCache. The subtle difference is that FDCache ensures that any object that is still being referenced by something other than the cache cannot be ejected from the cache.

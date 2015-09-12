@@ -1,7 +1,7 @@
 @import Foundation;
 
 
-#pragma mak Type Definitions
+#pragma mak - Type Definitions
 
 typedef id (^FDValueTransformerBlock)(id value);
 
@@ -14,7 +14,7 @@ A block-based subclass of NSValueTransformer.
 @interface FDValueTransformer : NSValueTransformer
 
 
-#pragma mark - Constructors
+#pragma mark - Initializers
 
 /**
 Creates a transformer with the specified blocks.

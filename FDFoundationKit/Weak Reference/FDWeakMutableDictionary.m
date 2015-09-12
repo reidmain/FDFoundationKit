@@ -1,9 +1,10 @@
 #import "FDWeakMutableDictionary.h"
-#import "FDWeakReference.h"
+
 #import "FDThreadSafeMutableDictionary.h"
+#import "FDWeakReference.h"
 
 
-#pragma mark Class Definition
+#pragma mark - Class Definition
 
 @implementation FDWeakMutableDictionary
 {
@@ -11,7 +12,7 @@
 }
 
 
-#pragma mark - Constructors
+#pragma mark - Initializers
 
 - (instancetype)initWithCapacity: (NSUInteger)capacity
 {
